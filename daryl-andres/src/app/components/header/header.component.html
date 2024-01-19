@@ -1,8 +1,7 @@
 <div class="absolute top-0 left-0 w-full h-full bg-white shadow-md transition-transform duration-300"
-    [ngClass]="isScrolled ? 'translate-x-0' : 'translate-x-full'">
+    [ngClass]="isScrolled ? 'translate-x-0' : '-translate-x-full'">
 </div>
-<div class="relative w-full max-w-7xl mx-auto px-4 bg-transparent font-semibold"
-    [ngClass]="{'text-slate-900': isScrolled}">
+<div class="relative w-full max-w-7xl mx-auto px-4 bg-transparent" [ngClass]="{'text-slate-900': isScrolled}">
     <div class="flex justify-between items-center w-full">
         <a href="#home">
             <div *ngIf="!isScrolled" class="w-fit py-4">
@@ -14,24 +13,24 @@
         </a>
         <nav class="flex space-x-5">
             <a class="px-2 py-1 transition-all duration-300 cursor-pointer"
-               [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
-               (click)="scrollTo('#home')">
-               Home
+                [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
+                (click)="scrollTo('#home')">
+                Home
             </a>
             <a class="px-2 py-1 transition-all duration-300 cursor-pointer"
-               [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
-               href="">
-               About
+                [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
+                href="">
+                About
             </a>
             <a class="px-2 py-1 transition-all duration-300 cursor-pointer"
-               [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
-               href="">
-               Projects
+                [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
+                href="">
+                Projects
             </a>
             <a class="px-2 py-1 transition-all duration-300 cursor-pointer"
-               [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
-               href="">
-               Contact
+                [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-[#0F81FF] hover:text-white': 'hover:bg-white hover:text-slate-900'"
+                href="">
+                Contact
             </a>
         </nav>
     </div>

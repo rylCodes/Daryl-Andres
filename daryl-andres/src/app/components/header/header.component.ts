@@ -10,6 +10,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
+    console.log("scrolling..")
     this.isScrolled = window.scrollY > 0;
   }
 
