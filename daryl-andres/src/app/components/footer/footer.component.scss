@@ -1,0 +1,12 @@
+a {
+    transition: all;
+    transition-duration: 0.3s;
+
+    &:hover {
+        background-color: white;
+
+        fa-icon {
+            color: #030712;
+        }
+    }
+}
