@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faImage, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-resume',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './resume.component.scss'
 })
 export class ResumeComponent {
-
+  faImage = faImage;
+  faDownload = faDownload;
 }

@@ -1,17 +1,17 @@
 <section id="resume" class="w-full mx-auto bg-white">
     <div class="w-full max-w-7xl mx-auto py-20">
         <h2 class="w-full font-extrabold text-slate-800 text-4xl px-4">RESUME</h2>
-        <!-- Skills -->
         <div class="p-4 w-full mt-4">
             <!-- SKILLS -->
             <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">
                 SKILLS
             </h4>
-            <div class="flex flex-col w-full shadow-md p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
+            <div class="flex flex-col w-full shadow-lg p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
                 <div class="w-full space-y-2 md:w-1/2">
+                    <!-- Technical Skills -->
                     <h5 class="font-extrabold text-slate-800 text-xl">TECHNICAL SKILLS:</h5>
                     <div class="px-6">
-                        <h6 class="font-semibold">FRONT-END DEVELOPMENT</h6>
+                        <h6 class="font-bold">FRONT-END DEVELOPMENT</h6>
                         <ul class="list-disc list-inside">
                             <li>Angular, Typescript</li>
                             <li>Tailwind</li>
@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                     <div class="px-6">
-                        <h6 class="font-semibold">BACK-END DEVELOPMENT</h6>
+                        <h6 class="font-bold">BACK-END DEVELOPMENT</h6>
                         <ul class="list-disc list-inside">
                             <li>Django, Python</li>
                             <li>Django-Rest-Framework</li>
@@ -27,7 +27,7 @@
                         </ul>
                     </div>
                     <div class="px-6">
-                        <h6 class="font-semibold">DEPLOYMENT & VERSION CONTROL</h6>
+                        <h6 class="font-bold">DEPLOYMENT & VERSION CONTROL</h6>
                         <ul class="list-disc list-inside">
                             <li>Git</li>
                             <li>Microsoft Azure</li>
@@ -35,6 +35,7 @@
                     </div>
                 </div>
                 <div class="w-full space-y-2 md:w-1/2">
+                    <!-- Soft Skills -->
                     <h5 class="font-extrabold text-slate-800 text-xl">SOFT SKILLS:</h5>
                     <ul class="list-disc list-inside">
                         <li>Communication Skills</li>
@@ -47,98 +48,133 @@
             </div>
         </div>
 
-        <!-- Certifications -->
         <div class="p-4 w-full mt-4">
-            <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">
-                CERTIFICATIONS
-            </h4>
-            <a
-                href="https://www.freecodecamp.org/certification/fccf25ac698-ea5b-417b-bdb6-59c9ad91fc03/responsive-web-design">FreeCodeCamp</a>
-            <div class="flex flex-col w-full shadow-md p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
-                <div class="w-full space-y-2 md:w-1/2">
-                    <h5 class="font-extrabold text-slate-800 text-xl">TECHNICAL SKILLS:</h5>
-                    <div class="px-6">
-                        <h6 class="font-semibold">FRONT-END DEVELOPMENT</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Angular, Typescript</li>
-                            <li>Tailwind</li>
-                            <li>HTML5, CSS3, JavaScript</li>
-                        </ul>
+            <!-- CERTIFICATIONS -->
+            <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">CERTIFICATIONS</h4>
+            <!-- Left Items -->
+            <div class="w-full shadow-lg p-4">
+                <!-- WEB DEVELOPMENT -->
+                <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT CERTIFICATIONS:</h5>
+                <div class="flex flex-col w-full py-2 px-4 md:flex-row">
+                    <div class="w-full md:w-1/2">
+                        <!-- Sololearn -->
+                        <div class="w-full">
+                            <h6 class="font-bold">SOLOLEARN</h6>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to HTML</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CC-HZXGEPVQ/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to CSS</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CC-2DUIMSYV/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CC-WS3UGLYV/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Angular + NestJS</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CT-CYNTL353/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to Python</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CC-0PAX9KDD/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Python Data Structures</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        <a href="https://api2.sololearn.com/v2/certificates/CT-IOJ0VWCC/image/png">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Freecodecamp -->
+                        <div class="w-full mt-2">
+                            <h6 class="font-bold">FREECODECAMP</h6>
+                            <div class="flex flex-col">
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Responsive Web Design</p>
+                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
+                                        <a target="_blank" href="https://www.freecodecamp.org/certification/fccf25ac698-ea5b-417b-bdb6-59c9ad91fc03/responsive-web-design">
+                                            <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
+                                        </a>                                        
+                                        <a href="#">
+                                            <fa-icon [icon]="faDownload"></fa-icon>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                                <!-- Freecodecamp ends here -->
+                        </div>
+                        <!-- Left Items ends here -->
                     </div>
-                    <div class="px-6">
-                        <h6 class="font-semibold">BACK-END DEVELOPMENT</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Django, Python</li>
-                            <li>Django-Rest-Framework</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
-                    <div class="px-6">
-                        <h6 class="font-semibold">DEPLOYMENT & VERSION CONTROL</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Git</li>
-                            <li>Microsoft Azure</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="w-full space-y-2 md:w-1/2">
-                    <h5 class="font-extrabold text-slate-800 text-xl">SOFT SKILLS:</h5>
-                    <ul class="list-disc list-inside">
-                        <li>Communication Skills</li>
-                        <li>Customer Focus</li>
-                        <li>Team Collaboration</li>
-                        <li>Project Management</li>
-                        <li>Continuous Learning</li>
-                    </ul>
                 </div>
             </div>
         </div>
 
-        <!-- Flex Container -->
-        <div class="flex flex-col w-full max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row">
-                <!-- Left Item -->
-                <div class="flex flex-col justify-between p-4 space-y-8 w-full md:w-1/2">
-                    <!-- PROFESSIONAL EXPERIENCEL -->
-                    <div>
-                        <h4 class="font-bold text-slate-900 text-3xl text-center">
-                            PROFESSIONAL EXPERIENCE
-                        </h4>
-                        <p class="leading-7 mt-4">
-                            This portal provides the services of Negosyo Center Antipolo accessible support for
-                            businesses in the city.
-                            It offers resources, business registration assistance, and advisory services to facilitate
-                            the growth and development of MSMEs.
-                        </p>
-                        <div class="mt-6">
-                            <h5 class="font-medium">Negosyo Center Business Counselor | DTI-Rizal | Location | 2021-2024
-                            </h5>
-                            <ul class="px-6 mt-2 space-y-1">
-                                <li>HTML, CSS, JavaScript</li>
-                                <li>Django, Python</li>
-                                <li>Tailwindcss</li>
-                            </ul>
-                        </div>
+        <!-- WORK EXPERIENCE / EDUCATION -->
+        <div class="p-4 w-full mt-4">
+            <!-- SKILLS -->
+            <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">
+                WORK EXPERIENCE / EDUCATION
+            </h4>
+            <div class="flex flex-col w-full shadow-lg p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
+                <div class="w-full space-y-2 md:w-1/2">
+                    <!-- Work Experience -->
+                    <h5 class="font-extrabold text-slate-800 text-xl">WORK EXPERIENCE:</h5>
+                    <div class="px-6">
+                        <h6 class="font-bold">BUSINESS COUNSELOR</h6>
+                        <p>DTI-Rizal - Negosyo Center Antipolo City</p>
+                        <p>March 2021 - Present</p>
+                    </div>
+                    <div class="px-6">
+                        <h6 class="font-bold">SALES ASSISTANT</h6>
+                        <p>ACE Hardware Phils Inc. - SM Cherry Antipolo</p>
+                        <p>October 2019 - February 2021</p>
                     </div>
                 </div>
-                <!-- Right item -->
-                <div class="flex flex-col justify-between p-4 space-y-8 w-full md:w-1/2">
-                    <!-- EDUCATION -->
-                    <div>
-                        <h4 class="font-bold text-slate-900 text-3xl text-center">
-                            EDUCATION
-                        </h4>
-                        <p class="leading-7 mt-4">
-                            This website is a practical tool for DTI-Rizal business counselors, offering a resource hub
-                            to support informed guidance for businesses and enhance the counseling process.
-                        </p>
-                        <div class="mt-6">
-                            <h5 class="font-medium">DEVELOPMENT TOOLS</h5>
-                            <ul class="px-6 mt-2 space-y-1">
-                                <li>HTML, CSS, JavaScript</li>
-                            </ul>
-                        </div>
+                <div class="w-full space-y-2 md:w-1/2">
+                    <!-- Education -->
+                    <h5 class="font-extrabold text-slate-800 text-xl">EDUCATION:</h5>
+                    <div class="px-6">
+                        <h6 class="font-bold">BSBA - MARKETING MANAGEMENT</h6>
+                        <p>ICCT Colleges Foundation Inc. - Antipolo City</p>
+                        <p>May 2017 - December 2019</p>
                     </div>
+                    <!-- <div class="px-6">
+                        <h6 class="font-bold">CERTIFICATE IN TEACHING PROGRAM (SECONDARY)</h6>
+                        <p>ICCT Colleges Foundation Inc. - Antipolo City</p>
+                        <p>2021</p>
+                    </div> -->
                 </div>
             </div>
         </div>
