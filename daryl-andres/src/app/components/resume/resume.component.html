@@ -1,4 +1,4 @@
-<section id="resume" class="w-full mx-auto bg-white">
+<section id="resume" class="relative w-full mx-auto bg-white">
     <div class="w-full max-w-7xl mx-auto py-20">
         <h2 class="w-full font-extrabold text-slate-800 text-4xl px-4">RESUME</h2>
         <div class="p-4 w-full mt-4">
@@ -52,9 +52,9 @@
             <!-- CERTIFICATIONS -->
             <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">CERTIFICATIONS</h4>
             <!-- Left Items -->
-            <div class="w-full shadow-lg p-4">
+            <div class="relative w-full shadow-lg p-4">
                 <!-- WEB DEVELOPMENT -->
-                <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT CERTIFICATIONS:</h5>
+                <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT:</h5>
                 <div class="flex flex-col w-full py-2 px-4 md:flex-row">
                     <div class="w-full md:w-1/2">
                         <!-- Sololearn -->
@@ -63,56 +63,50 @@
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to HTML</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CC-HZXGEPVQ/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.html)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to CSS</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CC-2DUIMSYV/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.css)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CC-WS3UGLYV/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.js)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Angular + NestJS</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CT-CYNTL353/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.angularNetJs)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to Python</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CC-0PAX9KDD/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.python)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Python Data Structures</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        <a href="https://api2.sololearn.com/v2/certificates/CT-IOJ0VWCC/image/png">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(webCertificates.pythonDataStructure)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
                                     </div>
                                 </div>
                             </div>
@@ -123,19 +117,31 @@
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Responsive Web Design</p>
-                                    <div class="flex items-center space-x-2 w-auto md:w-1/2">
-                                        <a target="_blank" href="https://www.freecodecamp.org/certification/fccf25ac698-ea5b-417b-bdb6-59c9ad91fc03/responsive-web-design">
-                                            <fa-icon class="cursor-pointer" [icon]="faImage"></fa-icon>
-                                        </a>                                        
-                                        <a href="#">
-                                            <fa-icon [icon]="faDownload"></fa-icon>
-                                        </a>
-                                    </div>
+                                    <a target="_blank" href="https://www.freecodecamp.org/certification/fccf25ac698-ea5b-417b-bdb6-59c9ad91fc03/responsive-web-design">
+                                        <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm">           
+                                            <fa-icon [icon]="faCertificate"></fa-icon>
+                                            <span>VIEW</span>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                                 <!-- Freecodecamp ends here -->
                         </div>
                         <!-- Left Items ends here -->
+                    </div>
+                </div>
+                <!-- CERTIFICATE IMAGE -->
+                <div *ngIf="certificateOnView" class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
+                    <div class="flex flex-col items-end w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
+                        <fa-icon class="text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
+                                (click)="closeCertificate()" [icon]="faTimes">
+                        </fa-icon>
+                        <div class="flex flex-col items-center px-4 mt-2">
+                            <img class="certificateImg w-full h-auto" [src]="certUrl" alt="certificate">
+                            <div class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
+                                <a [href]="certUrl">{{certUrl}}</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,3 +186,4 @@
         </div>
     </div>
 </section>
+

@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    console.log("scrolling..")
     this.isScrolled = window.scrollY > 0;
   }
 
