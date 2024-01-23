@@ -64,7 +64,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to HTML</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.html)">
+                                        (click)="viewCertificate(certImgPath.html, certURL.html)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -72,7 +72,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to CSS</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.css)">
+                                        (click)="viewCertificate(certImgPath.css, certURL.css)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -80,7 +80,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.js)">
+                                        (click)="viewCertificate(certImgPath.js, certURL.js)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -88,7 +88,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Angular + NestJS</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.angularNetJs)">
+                                        (click)="viewCertificate(certImgPath.angularNetJs, certURL.angularNetJs)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -96,7 +96,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Introduction to Python</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.python)">
+                                        (click)="viewCertificate(certImgPath.python, certURL.python)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -104,7 +104,7 @@
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Python Data Structures</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(webCertificates.pythonDataStructure)">
+                                        (click)="viewCertificate(certImgPath.pythonDataStructure, certURL.pythonDataStructure)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
@@ -117,12 +117,11 @@
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Responsive Web Design</p>
-                                    <a target="_blank" href="https://www.freecodecamp.org/certification/fccf25ac698-ea5b-417b-bdb6-59c9ad91fc03/responsive-web-design">
-                                        <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm">           
-                                            <fa-icon [icon]="faCertificate"></fa-icon>
-                                            <span>VIEW</span>
-                                        </div>
-                                    </a>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
                                 </div>
                             </div>
                                 <!-- Freecodecamp ends here -->
@@ -130,16 +129,17 @@
                         <!-- Left Items ends here -->
                     </div>
                 </div>
-                <!-- CERTIFICATE IMAGE -->
+
+                <!-- CERTIFICATE MODAL -->
                 <div *ngIf="certificateOnView" class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
                     <div class="flex flex-col items-end w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
                         <fa-icon class="text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
                                 (click)="closeCertificate()" [icon]="faTimes">
                         </fa-icon>
                         <div class="flex flex-col items-center px-4 mt-2">
-                            <img class="certificateImg w-full h-auto" [src]="certUrl" alt="certificate">
+                            <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
                             <div class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
-                                <a [href]="certUrl">{{certUrl}}</a>
+                                <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
                             </div>
                         </div>
                     </div>

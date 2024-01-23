@@ -35,9 +35,20 @@ export class ResumeComponent implements OnInit {
 
   certificateOnView: boolean = false;
 
-  certUrl: string = '';
+  imgUrl: string = '';
+  imgPath: string = '';
 
-  webCertificates: Certificate = {
+  certImgPath: Certificate = {
+    html: '../../../assets/img/certificates/sololearn-html-introduction.png',
+    css: '../../../assets/img/certificates/sololearn-css-introduction.png',
+    js: '../../../assets/img/certificates/sololearn-js-introduction.png',
+    angularNetJs: '../../../assets/img/certificates/sololearn-angular-netjs.png',
+    python: '../../../assets/img/certificates/sololearn-python-introduction.png',
+    pythonDataStructure: '../../../assets/img/certificates/sololearn-python-data-structure.png',
+    responsiveWebDesign: '../../../assets/img/certificates/freecodecamp-responsive-web-design.JPG',
+  };
+
+  certURL: Certificate = {
     html: 'https://api2.sololearn.com/v2/certificates/CC-HZXGEPVQ/image/png',
     css: 'https://api2.sololearn.com/v2/certificates/CC-2DUIMSYV/image/png',
     js: 'https://api2.sololearn.com/v2/certificates/CC-WS3UGLYV/image/png',
@@ -52,14 +63,16 @@ export class ResumeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  viewCertificate(imgUrl: string) {
-    this.certUrl = imgUrl;
+  viewCertificate(imgPath: string, imgUrl: string) {
+    this.imgPath = imgPath
+    this.imgUrl = imgUrl;
     this.certificateOnView = true;
     console.log("click works!")
   }
 
   closeCertificate() {
     this.certificateOnView =false;
-    this.certUrl = '';
+    this.imgPath = ''
+    this.imgUrl = '';
   }
 }
