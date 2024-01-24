@@ -13,8 +13,12 @@ export class HeaderComponent implements OnInit {
   isScrolled: boolean = false;
   isNavBarOpen: boolean = false;
 
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
+    if (this.isNavBarOpen) {
+      this.isNavBarOpen = false;
+    };
+    
     this.isScrolled = window.scrollY > 0;
   }
 
@@ -25,7 +29,9 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollTo(target: string): void {
-    this.toggleNavBar();
+    if (this.isNavBarOpen) {
+      this.isNavBarOpen = false;
+    };
 
     const elem = document.querySelector(target);
     if (elem) {

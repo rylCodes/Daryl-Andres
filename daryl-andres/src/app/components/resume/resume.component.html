@@ -6,42 +6,28 @@
             <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">
                 SKILLS
             </h4>
-            <div class="flex flex-col w-full shadow-lg p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
-                <div class="w-full space-y-2 md:w-1/2">
-                    <!-- Technical Skills -->
-                    <h5 class="font-extrabold text-slate-800 text-xl">TECHNICAL SKILLS:</h5>
-                    <div class="px-6">
-                        <h6 class="font-bold">FRONT-END DEVELOPMENT</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Angular, Typescript</li>
-                            <li>Tailwind</li>
-                            <li>HTML5, CSS3, JavaScript</li>
-                        </ul>
-                    </div>
-                    <div class="px-6">
-                        <h6 class="font-bold">BACK-END DEVELOPMENT</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Django, Python</li>
-                            <li>Django-Rest-Framework</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
-                    <div class="px-6">
-                        <h6 class="font-bold">DEPLOYMENT & VERSION CONTROL</h6>
-                        <ul class="list-disc list-inside">
-                            <li>Git</li>
-                            <li>Microsoft Azure</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="w-full space-y-2 md:w-1/2">
-                    <!-- Soft Skills -->
-                    <h5 class="font-extrabold text-slate-800 text-xl">SOFT SKILLS:</h5>
+            <div class="flex flex-col w-full p-4 shadow-lg space-y-3 md:space-y-0 md:flex-row">
+                <div class="w-full px-6 md:w-1/3">
+                    <h6 class="font-bold">FRONT-END DEVELOPMENT</h6>
                     <ul class="list-disc list-inside">
-                        <li>Effective Communication</li>
-                        <li>Public Speaking</li>
-                        <li>Team Collaboration</li>
-                        <li>Project Management</li>
+                        <li>Angular, Typescript</li>
+                        <li>Tailwind</li>
+                        <li>HTML5, CSS3, JavaScript</li>
+                    </ul>
+                </div>
+                <div class="w-full px-6 md:w-1/3">
+                    <h6 class="font-bold">BACK-END DEVELOPMENT</h6>
+                    <ul class="list-disc list-inside">
+                        <li>Django, Python</li>
+                        <li>Django-Rest-Framework</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="w-full px-6 md:w-1/3">
+                    <h6 class="font-bold">DEPLOYMENT & VERSION CONTROL</h6>
+                    <ul class="list-disc list-inside">
+                        <li>Git</li>
+                        <li>Microsoft Azure</li>
                     </ul>
                 </div>
             </div>
@@ -49,16 +35,15 @@
 
         <div class="relative p-4 w-full mt-4">
             <!-- CERTIFICATIONS -->
-            <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">CERTIFICATIONS</h4>
-            <!-- Flex Container -->
-            <div class="flex flex-col w-full shadow-lg p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
+            <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">RELEVANT COURSES
+            </h4>
+            <div class="w-full shadow-lg p-4">
                 <!-- WEB DEVELOPMENT -->
-                <div class="w-full md:w-1/2">
-                    <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT:</h5>
-                    <div class="flex flex-col w-full py-2 px-4">
+                <div class="w-full">
+                    <div class="flex flex-col w-full px-4 md:flex-row">
                         <!-- Freecodecamp -->
                         <div class="w-full">
-                            <h6 class="font-bold">FREECODECAMP</h6>
+                            <h6 class="font-bold">FREECODECAMP | Developer Certification</h6>
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Responsive Web Design</p>
@@ -72,8 +57,8 @@
                         </div>
 
                         <!-- Sololearn -->
-                        <div class="w-full mt-2">
-                            <h6 class="font-bold">SOLOLEARN</h6>
+                        <div class="w-full mt-2 md:mt-0">
+                            <h6 class="font-bold">SOLOLEARN | Course Certificate</h6>
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Angular + NestJS</p>
@@ -125,41 +110,24 @@
                                 </div>
                             </div>
                         </div>
-                            <!-- Left Items ends here -->
-                    </div>
-                </div>
-
-                <!-- APPRECIATION CERTIFICATES -->
-                <div class="w-full md:w-1/2">
-                    <h5 class="font-extrabold text-slate-800 text-xl">OTHER CERTIFICATION:</h5>
-                    <div class="flex flex-col w-full py-2 px-4">
-                        <div class="w-full">
-                            <h6 class="font-bold">Received Certificate of Appreciation as a Resource Speaker</h6>
-                            <div class="flex flex-col">
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">SM Foundation</p>
-                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
-                                        <fa-icon [icon]="faCertificate"></fa-icon>
-                                        <span>VIEW</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Left Items ends here -->
                     </div>
                 </div>
             </div>
 
             <!-- CERTIFICATE MODAL -->
-            <div *ngIf="certificateOnView" class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
+            <div *ngIf="certificateOnView"
+                class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
                 <div class="flex flex-col items-center w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
-                    <fa-icon class="self-end text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
-                            (click)="closeCertificate()" [icon]="faTimes">
+                    <fa-icon
+                        class="self-end text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
+                        (click)="closeCertificate()" [icon]="faTimes">
                     </fa-icon>
                     <div class="flex flex-col items-center px-4 mt-2">
                         <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
                     </div>
-                    <div class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
+                    <div
+                        class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
                         <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
                     </div>
                 </div>
@@ -203,6 +171,45 @@
                 </div>
             </div>
         </div>
+
+        <!-- APPRECIATION CERTIFICATES -->
+        <!-- <div class="w-full md:w-1/2">
+            <h5 class="font-extrabold text-slate-800 text-xl">OTHER CERTIFICATION:</h5>
+            <div class="flex flex-col w-full py-2 px-4">
+                <div class="w-full">
+                    <h6 class="font-bold">as a Resource Speaker during:</h6>
+                    <div class="flex justify-between items-center w-full">
+                        <p class="w-auto">
+                            Kabalikat sa Kabuhayan | SM Foundation
+                        </p>
+                        <div class="cursor-pointer flex self-end items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                            (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
+                            <fa-icon [icon]="faCertificate"></fa-icon>
+                            <span>VIEW</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full">
+                        <p class="w-auto">
+                            Local Peace Engagement | 80th Infantry (STEADFAST) Battalion
+                        </p>
+                        <div class="cursor-pointer flex self-end items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                            (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
+                            <fa-icon [icon]="faCertificate"></fa-icon>
+                            <span>VIEW</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center w-full">
+                        <p class="w-auto">
+                            2023 Negosyo Forum | Antipolo City Government
+                        </p>
+                        <div class="cursor-pointer flex self-end items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                            (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
+                            <fa-icon [icon]="faCertificate"></fa-icon>
+                            <span>VIEW</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 </section>
-
