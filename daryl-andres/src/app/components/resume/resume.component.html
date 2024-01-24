@@ -38,53 +38,43 @@
                     <!-- Soft Skills -->
                     <h5 class="font-extrabold text-slate-800 text-xl">SOFT SKILLS:</h5>
                     <ul class="list-disc list-inside">
-                        <li>Communication Skills</li>
-                        <li>Customer Focus</li>
+                        <li>Effective Communication</li>
+                        <li>Public Speaking</li>
                         <li>Team Collaboration</li>
                         <li>Project Management</li>
-                        <li>Continuous Learning</li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="p-4 w-full mt-4">
+        <div class="relative p-4 w-full mt-4">
             <!-- CERTIFICATIONS -->
             <h4 class="font-bold text-white bg-slate-900 text-2xl text-center py-2">CERTIFICATIONS</h4>
-            <!-- Left Items -->
-            <div class="relative w-full shadow-lg p-4">
+            <!-- Flex Container -->
+            <div class="flex flex-col w-full shadow-lg p-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
                 <!-- WEB DEVELOPMENT -->
-                <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT:</h5>
-                <div class="flex flex-col w-full py-2 px-4 md:flex-row">
-                    <div class="w-full md:w-1/2">
-                        <!-- Sololearn -->
+                <div class="w-full md:w-1/2">
+                    <h5 class="font-extrabold text-slate-800 text-xl">WEB DEVELOPMENT:</h5>
+                    <div class="flex flex-col w-full py-2 px-4">
+                        <!-- Freecodecamp -->
                         <div class="w-full">
-                            <h6 class="font-bold">SOLOLEARN</h6>
+                            <h6 class="font-bold">FREECODECAMP</h6>
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to HTML</p>
+                                    <p class="w-auto md:w-1/2">Responsive Web Design</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(certImgPath.html, certURL.html)">
+                                        (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to CSS</p>
-                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(certImgPath.css, certURL.css)">
-                                        <fa-icon [icon]="faCertificate"></fa-icon>
-                                        <span>VIEW</span>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
-                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
-                                        (click)="viewCertificate(certImgPath.js, certURL.js)">
-                                        <fa-icon [icon]="faCertificate"></fa-icon>
-                                        <span>VIEW</span>
-                                    </div>
-                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sololearn -->
+                        <div class="w-full mt-2">
+                            <h6 class="font-bold">SOLOLEARN</h6>
+                            <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
                                     <p class="w-auto md:w-1/2">Angular + NestJS</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
@@ -109,14 +99,45 @@
                                         <span>VIEW</span>
                                     </div>
                                 </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to HTML</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.html, certURL.html)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to CSS</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.css, certURL.css)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center md:justify-normal">
+                                    <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.js, certURL.js)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <!-- Freecodecamp -->
-                        <div class="w-full mt-2">
-                            <h6 class="font-bold">FREECODECAMP</h6>
+                            <!-- Left Items ends here -->
+                    </div>
+                </div>
+
+                <!-- APPRECIATION CERTIFICATES -->
+                <div class="w-full md:w-1/2">
+                    <h5 class="font-extrabold text-slate-800 text-xl">OTHER CERTIFICATION:</h5>
+                    <div class="flex flex-col w-full py-2 px-4">
+                        <div class="w-full">
+                            <h6 class="font-bold">Received Certificate of Appreciation as a Resource Speaker</h6>
                             <div class="flex flex-col">
                                 <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Responsive Web Design</p>
+                                    <p class="w-auto md:w-1/2">SM Foundation</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
@@ -124,24 +145,22 @@
                                     </div>
                                 </div>
                             </div>
-                                <!-- Freecodecamp ends here -->
                         </div>
-                        <!-- Left Items ends here -->
                     </div>
                 </div>
+            </div>
 
-                <!-- CERTIFICATE MODAL -->
-                <div *ngIf="certificateOnView" class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
-                    <div class="flex flex-col items-end w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
-                        <fa-icon class="text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
-                                (click)="closeCertificate()" [icon]="faTimes">
-                        </fa-icon>
-                        <div class="flex flex-col items-center px-4 mt-2">
-                            <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
-                            <div class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
-                                <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
-                            </div>
-                        </div>
+            <!-- CERTIFICATE MODAL -->
+            <div *ngIf="certificateOnView" class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
+                <div class="flex flex-col items-center w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
+                    <fa-icon class="self-end text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
+                            (click)="closeCertificate()" [icon]="faTimes">
+                    </fa-icon>
+                    <div class="flex flex-col items-center px-4 mt-2">
+                        <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
+                    </div>
+                    <div class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
+                        <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
                     </div>
                 </div>
             </div>

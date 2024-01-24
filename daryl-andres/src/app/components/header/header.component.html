@@ -1,5 +1,5 @@
 <header class="relative w-full h-full">
-    <div class="absolute top-0 left-0 w-full h-full bg-white shadow-md transition-transform md:duration-300"
+    <div class="absolute top-0 left-0 w-full h-full bg-white shadow-md transition-transform duration-300"
         [ngClass]="{
             'translate-x-0' : isNavBarOpen || isScrolled,
             '-translate-x-full': !isScrolled
@@ -8,8 +8,8 @@
     <div class="relative w-full max-w-7xl mx-auto px-4 bg-transparent" [ngClass]="{'text-slate-900': isNavBarOpen || isScrolled}">
         <div class="flex justify-between items-center w-full">
             <a href="#home">
-                <div class="w-fit py-4" [ngClass]="{'dark-blue': isNavBarOpen || isScrolled}">
-                    <img class="w-14" src="../../../assets/img/d-icon.png" alt="">
+                <div class="w-fit py-4" [ngClass]="{'img-white': !isNavBarOpen && !isScrolled, 'img-slate-950': isNavBarOpen || isScrolled}">
+                    <img class="w-14" src="../../../assets/img/d-icon-black.png" alt="">
                 </div>
                 <!-- <div *ngIf="" class="w-fit py-4">
                     <img class="w-14" src="../../../assets/img/d-icon-dark.png" alt="">
