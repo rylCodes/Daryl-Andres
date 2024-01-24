@@ -1,1 +1,34 @@
-<p>contact works!</p>
+<section class="w-full bg-slate-900 text-white" id="contact">
+    <div class="w-full max-w-5xl mx-auto py-20">
+        <h2 class="w-full font-extrabold text-4xl px-4">CONNECT WITH ME</h2>
+        <form class="w-full mt-8 px-4">
+            <!-- First and Last Name -->
+            <div class="flex flex-col w-full mt-0 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row md:mt-4">
+                <input class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                    placeholder="First name *" type="text" name="first-name*" id="first-name" required>
+                <input class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                    placeholder="Last name *" type="text" name="last-name" id="last-name" required>
+            </div>
+
+            <!-- Email and Contact No. -->
+            <div class="flex flex-col w-full mt-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
+                <input class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                    placeholder="Email *" type="email" name="email" id="email" required>
+                <input class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                    placeholder="Contact No." type="tel" name="mobile" id="mobile">
+            </div>
+
+            <!-- Subject and Message -->
+            <input class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md mt-4"
+                placeholder="Subject *" type="text" name="subject" id="subject" required>
+            <textarea class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md mt-4"
+            placeholder="Message *" name="message" id="message" cols="30" rows="10"></textarea>
+
+            <!-- Submit Button -->
+            <button class="bg-white w-full px-10 py-3 rounded-md mt-4 text-slate-900 font-bold hover:opacity-90 md:w-fit"
+                type="submit">
+                SEND IT
+            </button>
+        </form>
+    </div>
+</section>

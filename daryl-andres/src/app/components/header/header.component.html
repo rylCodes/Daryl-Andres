@@ -44,7 +44,7 @@
                 </a>
                 <a class="px-2 py-2 transition-all duration-300 cursor-pointer"
                     [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-slate-700 hover:text-white': 'hover:bg-white hover:text-slate-900'"
-                    href="">
+                    (click)="scrollTo('#contact')">
                     CONTACT
                 </a>
             </nav>
@@ -68,7 +68,8 @@
                     (click)="scrollTo('#resume')">
                     RESUME
                 </a>
-                <a class="px-2 py-4 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"            href="">
+                <a class="px-2 py-4 transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+                    (click)="scrollTo('#contact')">
                     CONTACT
                 </a>
             </nav>
