@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MessageData } from '../../interface/contact';
 import { MessageService } from '../../services/message/message.service';
 
@@ -17,22 +18,33 @@ export class ContactComponent {
     message: '',
   }
 
+  isMessageSubmitted: boolean = false;
+
   constructor(private messageService: MessageService) {}
 
-  clearForm() {
-    this.contactFormData.firstname = '';
-    this.contactFormData.lastname = '';
-    this.contactFormData.email = '';
-    this.contactFormData.contact = '';
-    this.contactFormData.subject = '';
-    this.contactFormData.message = '';
-  }
+  onSubmit(contactForm: NgForm) {
+    if (this.contactFormData.firstname.trim() === "") {
+      alert("Enter your first name");
+      return;
+    } else if (this.contactFormData.lastname.trim() === "") {
+      alert("Enter your last name");
+      return;
+    } else if (this.contactFormData.email.trim() === "") {
+      alert("Enter a valid email");
+      return;
+    } else if (this.contactFormData.subject.trim() === "") {
+      alert("Enter a subject");
+      return;
+    } else if (this.contactFormData.firstname.trim() === "") {
+      alert("Enter your message");
+      return;
+    };
 
-  onSubmit() {
     this.messageService.sendMessage(this.contactFormData).subscribe({
       next: (data) => {
         alert(`Thank you for reaching out to me. I'll get back to you as soon as possible.`);
         console.log('Message data:', data)
+        contactForm.resetForm();
       },
       error: (error) => {
         alert(`There's an error sending your message. Please try again later.`);

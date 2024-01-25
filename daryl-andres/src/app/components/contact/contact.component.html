@@ -1,13 +1,13 @@
 <section class="w-full bg-slate-900 text-white" id="contact">
     <div class="w-full max-w-5xl mx-auto py-20">
         <h2 class="w-full font-extrabold text-4xl px-4">CONNECT WITH ME</h2>
-        <form class="w-full mt-8 px-4" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+        <form class="w-full mt-8 px-4" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <!-- First and Last Name -->
             <div class="flex flex-col w-full mt-0 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row md:mt-4">
                 <div class="w-full">
                     <input #firstnameInput="ngModel"
-                        class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
-                        [ngClass]="{'border-red-500': !firstnameInput.value && firstnameInput.dirty}"
+                        class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
+                        [ngClass]="{'outline-red-500 border-red-500': !firstnameInput.value && firstnameInput.dirty}"
                         [(ngModel)]="contactFormData.firstname"
                         placeholder="First name *" type="text" name="first-name*" id="first-name" required>
                     <small *ngIf="!firstnameInput.value && firstnameInput.dirty" class="text-red-500 px-2">
@@ -16,7 +16,7 @@
                 </div>
                 <div class="w-full">
                     <input #lastNameInput="ngModel"
-                        class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                        class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
                         [ngClass]="{'border-red-500': !lastNameInput.value && lastNameInput.dirty}"
                         [(ngModel)]="contactFormData.lastname" 
                         placeholder="Last name *" type="text" name="last-name" id="last-name" required>
@@ -30,7 +30,7 @@
             <div class="flex flex-col w-full mt-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
                 <div class="w-full">
                     <input #emailInput="ngModel"
-                        class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                        class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
                         [ngClass]="{'border-red-500': (!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)}"
                         [(ngModel)]="contactFormData.email" 
                         placeholder="Email *" type="email" name="email" id="email" required email>
@@ -40,7 +40,7 @@
                     </small>
                 </div>
                 <div class="w-full">
-                    <input [(ngModel)]="contactFormData.contact" class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md"
+                    <input [(ngModel)]="contactFormData.contact" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
                     placeholder="Contact No." type="tel" name="mobile" id="mobile">
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <!-- Subject and Message -->
             <div class="w-full">
                 <input #subjectInput="ngModel"
-                    class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md mt-4"
+                    class="bg-inherit border-2 w-full px-4 py-2 rounded-md mt-4"
                     [ngClass]="{'border-red-500': !subjectInput.value && subjectInput.dirty}"
                     [(ngModel)]="contactFormData.subject" 
                     placeholder="Subject *" type="text" name="subject" id="subject" required>
@@ -56,7 +56,7 @@
             </div>
             <div class="w-full">
                 <textarea #messageInput="ngModel"
-                    class="bg-inherit border-2 border-white w-full px-4 py-2 rounded-md mt-4"
+                    class="bg-inherit border-2 w-full px-4 py-2 rounded-md mt-4"
                     [ngClass]="{'border-red-500': !messageInput.value && messageInput.dirty}"
                     [(ngModel)]="contactFormData.message"
                     placeholder="Message *" name="message" id="message" cols="30" rows="10"></textarea>
