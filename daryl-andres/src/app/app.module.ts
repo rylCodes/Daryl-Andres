@@ -11,6 +11,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
   ],
   providers: [
     provideClientHydration()
