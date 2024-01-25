@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MessageData } from '../../interface/contact';
+import { MessageService } from '../../services/message/message.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  contactFormData = {
+  contactFormData: MessageData = {
     firstname: '',
     lastname: '',
     email: '',
@@ -14,6 +16,8 @@ export class ContactComponent {
     subject: '',
     message: '',
   }
+
+  constructor(private messageService: MessageService) {}
 
   clearForm() {
     this.contactFormData.firstname = '';
@@ -25,7 +29,15 @@ export class ContactComponent {
   }
 
   onSubmit() {
-    console.log('Submitting form');
-    console.log(this.contactFormData);
+    this.messageService.sendMessage(this.contactFormData).subscribe({
+      next: (data) => {
+        alert(`Thank you for reaching out to me. I'll get back to you as soon as possible.`);
+        console.log('Message data:', data)
+      },
+      error: (error) => {
+        alert(`There's an error sending your message. Please try again later.`);
+        console.log('Error:', error);
+      }
+    })
   }
 }
