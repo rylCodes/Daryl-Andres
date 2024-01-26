@@ -59,13 +59,18 @@
                     class="bg-inherit border-2 w-full px-4 py-2 rounded-md mt-4"
                     [ngClass]="{'border-red-500': !messageInput.value && messageInput.dirty}"
                     [(ngModel)]="contactFormData.message"
-                    placeholder="Message *" name="message" id="message" cols="30" rows="10"></textarea>
+                    placeholder="Message *" name="message" id="message" required cols="30" rows="10"></textarea>
                 <small class="text-red-500 px-2" *ngIf="!messageInput.value && messageInput.dirty">This field is required!</small>
+            </div>
+
+            <div>
+                <re-captcha (resolved)="resolved($event)" [siteKey]="sitekey"></re-captcha>
             </div>
 
             <!-- Submit Button -->
             <button class="bg-white w-full px-10 py-3 rounded-md mt-4 text-slate-900 font-bold md:w-fit"
-                type="submit" [disabled]="contactForm.invalid" [ngClass]="{'bg-slate-200 text-slate-400': contactForm.invalid}">
+                type="submit" [disabled]="contactForm.invalid && !this.captchaResponse"
+                *ngIf="contactForm.valid && this.captchaResponse">
                 SEND IT
             </button>
         </form>

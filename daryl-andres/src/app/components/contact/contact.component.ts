@@ -9,6 +9,9 @@ import { MessageService } from '../../services/message/message.service';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  sitekey: string = '6LfA8FwpAAAAAJQMFUAdYkbMuegK6bC55IjkVsK7'
+  captchaResponse: string = ''
+
   contactFormData: MessageData = {
     firstname: '',
     lastname: '',
@@ -22,7 +25,19 @@ export class ContactComponent {
 
   constructor(private messageService: MessageService) {}
 
+  resolved(captchaResponse: string | null) {
+    console.log(captchaResponse);
+    if (captchaResponse) {
+      this.captchaResponse = captchaResponse;
+    }
+  }
+
   onSubmit(contactForm: NgForm) {
+    if (!this.captchaResponse) {
+      alert('Oops! It seems there was an issue with the reCAPTCHA');
+      return;
+    };
+
     if (this.contactFormData.firstname.trim() === "") {
       alert("Enter your first name");
       return;
