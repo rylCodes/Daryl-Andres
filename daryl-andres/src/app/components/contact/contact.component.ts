@@ -16,9 +16,10 @@ export class ContactComponent {
     firstname: '',
     lastname: '',
     email: '',
-    contact: '',
+    contact_number: '',
     subject: '',
     message: '',
+    captchaResponse: '',
   }
 
   isMessageSubmitted: boolean = false;
@@ -29,11 +30,12 @@ export class ContactComponent {
     console.log(captchaResponse);
     if (captchaResponse) {
       this.captchaResponse = captchaResponse;
+      this.contactFormData.captchaResponse = captchaResponse;
     }
   }
 
   onSubmit(contactForm: NgForm) {
-    if (!this.captchaResponse) {
+    if (!this.contactFormData.captchaResponse) {
       alert('Oops! It seems there was an issue with the reCAPTCHA');
       return;
     };
@@ -62,7 +64,7 @@ export class ContactComponent {
         contactForm.resetForm();
       },
       error: (error) => {
-        alert(`There's an error sending your message. Please try again later.`);
+        alert(`Failed: There's an error sending your message!`);
         console.log('Error:', error);
       }
     })
