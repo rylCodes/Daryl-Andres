@@ -1,14 +1,33 @@
-// /* section.component.css */
-// :host {
-//   height: 100vh;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: 2em;
-//   opacity: 0;
-//   transition: opacity 0.8s ease-in-out;
-// }
+h2,
+.project-container {
+    animation: ScrollReveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%
+}
 
-// :host.appear {
-//   opacity: 1;
-// }
+.dev-tool {
+    opacity: 0;
+    filter: blur(5px);
+    animation: ScrollSlideIn ease-in-out forwards;
+    animation-timeline: view();
+    animation-range: entry 50% cover 30%;
+}
+
+@keyframes ScrollSlideIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0) translateX(0);
+    }
+}
+
+@keyframes ScrollReveal {
+    from {
+	opacity: 0;
+	transform: translateY(25%);
+    }
+    to {
+	opacity: 1;
+	transform: translateY(0);
+    }
+}

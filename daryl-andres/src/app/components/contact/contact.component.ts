@@ -22,7 +22,7 @@ export class ContactComponent {
     captchaResponse: '',
   }
 
-  isMessageSubmitted: boolean = false;
+  isLoading: boolean = false;
 
   constructor(private messageService: MessageService) {}
 
@@ -41,31 +41,40 @@ export class ContactComponent {
     };
 
     if (this.contactFormData.firstname.trim() === "") {
-      alert("Enter your first name");
+      alert("Please enter your first name");
       return;
     } else if (this.contactFormData.lastname.trim() === "") {
-      alert("Enter your last name");
+      alert("Please enter your last name");
       return;
     } else if (this.contactFormData.email.trim() === "") {
-      alert("Enter a valid email");
+      alert("Please enter a valid email");
       return;
     } else if (this.contactFormData.subject.trim() === "") {
-      alert("Enter a subject");
+      alert("Please enter a subject");
       return;
     } else if (this.contactFormData.firstname.trim() === "") {
-      alert("Enter your message");
+      alert("Please enter your message");
       return;
     };
 
+    this.isLoading = true;
     this.messageService.sendMessage(this.contactFormData).subscribe({
       next: (data) => {
-        alert(`Thank you for reaching out to me. I'll get back to you as soon as possible.`);
+        this.isLoading = false;
+        alert(`It's great to hear from you. I'll get back to you as soon as possible.`);
         console.log('Message data:', data)
         contactForm.resetForm();
+        this.contactFormData.captchaResponse = '';
+        this.captchaResponse = '';
+        grecaptcha.reset();
       },
       error: (error) => {
+        this.isLoading = false;
         alert(`Failed: There's an error sending your message!`);
         console.log('Error:', error);
+        this.contactFormData.captchaResponse = '';
+        this.captchaResponse = '';
+        grecaptcha.reset();
       }
     })
   }
