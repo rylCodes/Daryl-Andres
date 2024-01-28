@@ -70,7 +70,7 @@ export class ContactComponent {
       },
       error: (error) => {
         this.isLoading = false;
-        alert(`Failed: There's an error sending your message!`);
+        alert(`Failed: ${error.statusText}`);
         console.log('Error:', error);
         this.contactFormData.captchaResponse = '';
         this.captchaResponse = '';
