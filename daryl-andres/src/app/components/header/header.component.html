@@ -46,31 +46,30 @@
                     Contact
                 </a>
             </nav>
-
-            <!-- Navigation Bar for Smaller Screens -->
-            <nav [ngClass]="isNavBarOpen? 'translate-x-0' : 'translate-x-full'"
-                class="absolute w-full top-full left-0 flex flex-col space-y-2 md:hidden transition-all duration-500 bg-white border border-white text-slate-900">
-                <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
-                    (click)="scrollTo('#home')">
-                    Home    
-                </a>
-                <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
-                    (click)="scrollTo('#about')">
-                    About
-                </a>
-                <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
-                    (click)="scrollTo('#projects')">
-                    Projects
-                </a>
-                <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
-                    (click)="scrollTo('#resume')">
-                    Resume
-                </a>
-                <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
-                    (click)="scrollTo('#contact')">
-                    Contact
-                </a>
-            </nav>
         </div>
     </div>
 </header>
+<!-- Navigation Bar for Smaller Screens -->
+<nav [ngClass]="isNavBarOpen? 'translate-x-0' : 'translate-x-full'"
+    class="absolute w-full top-full left-0 flex flex-col space-y-2 md:hidden transition-all duration-500 bg-white border border-white text-slate-900">
+    <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+        (click)="scrollTo('#home')">
+        Home    
+    </a>
+    <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+        (click)="scrollTo('#about')">
+        About
+    </a>
+    <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+        (click)="scrollTo('#projects')">
+        Projects
+    </a>
+    <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+        (click)="scrollTo('#resume')">
+        Resume
+    </a>
+    <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
+        (click)="scrollTo('#contact')">
+        Contact
+    </a>
+</nav>

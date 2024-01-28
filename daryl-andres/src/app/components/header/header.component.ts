@@ -29,9 +29,7 @@ export class HeaderComponent implements OnInit {
   }
 
   scrollTo(target: string): void {
-    if (this.isNavBarOpen) {
-      this.isNavBarOpen = false;
-    };
+    this.isNavBarOpen = false;
 
     const elem = document.querySelector(target);
     if (elem) {

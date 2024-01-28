@@ -1,6 +1,6 @@
 <section class="relative w-full bg-slate-900 text-white" id="contact">
     <div class="w-full max-w-5xl mx-auto py-20">
-        <h2 class="w-full font-extrabold text-4xl px-4">CONNECT WITH ME</h2>
+        <h2 class="w-full font-extrabold text-3xl px-4 md:text-4xl">CONNECT WITH ME</h2>
         <form class="w-full mt-8 px-4" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <!-- First and Last Name -->
             <div class="flex flex-col w-full mt-0 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row md:mt-4">
@@ -69,7 +69,7 @@
             <!-- Submit Button -->
             <button class="bg-white w-full px-10 py-3 rounded-md mt-4 text-slate-900 font-bold md:w-fit" type="submit"
                 [disabled]="contactForm.invalid && !this.captchaResponse"
-                [ngClass]="{'opacity-50': contactForm.invalid && !this.captchaResponse, 'opacity-100': contactForm.valid && this.captchaResponse}">
+                [ngClass]="{'opacity-50': contactForm.invalid || !this.captchaResponse, 'opacity-100': contactForm.valid && this.captchaResponse}">
                 SEND MESSAGE
             </button>
         </form>

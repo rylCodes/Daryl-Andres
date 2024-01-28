@@ -27,7 +27,6 @@ export class ContactComponent {
   constructor(private messageService: MessageService) {}
 
   resolved(captchaResponse: string | null) {
-    console.log(captchaResponse);
     if (captchaResponse) {
       this.captchaResponse = captchaResponse;
       this.contactFormData.captchaResponse = captchaResponse;
@@ -62,7 +61,6 @@ export class ContactComponent {
       next: (data) => {
         this.isLoading = false;
         alert(`It's great to hear from you. I'll get back to you as soon as possible.`);
-        console.log('Message data:', data)
         contactForm.resetForm();
         this.contactFormData.captchaResponse = '';
         this.captchaResponse = '';
@@ -71,7 +69,6 @@ export class ContactComponent {
       error: (error) => {
         this.isLoading = false;
         alert(`Failed: ${error.statusText}`);
-        console.log('Error:', error);
         this.contactFormData.captchaResponse = '';
         this.captchaResponse = '';
         grecaptcha.reset();
