@@ -9,7 +9,7 @@ import { error } from 'console';
   providedIn: 'root'
 })
 export class MessageService {
-  private apiUrl = 'http://127.0.0.1:8000/messages-api/create-message/'
+  private apiUrl = 'https://daryl-django-api.azurewebsites.net/messages-api/create-message/'
 
   constructor(private http: HttpClient) { }
 
