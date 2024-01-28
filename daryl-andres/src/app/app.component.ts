@@ -1,17 +1,10 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements AfterViewInit {
-  @ViewChild('about') aboutRef!: ElementRef;
-  title = 'daryl-andres';
+export class AppComponent {
 
-  ngAfterViewInit(): void {
-    if (this.aboutRef) {
-      console.log(this.aboutRef.nativeElement);
-    }
-  }
 }
