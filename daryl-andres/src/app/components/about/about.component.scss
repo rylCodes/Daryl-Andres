@@ -1,7 +1,19 @@
-h2, p {
-    animation: CssScrollReveal ease-in-out both;
-    animation-timeline: view();
-    animation-range: entry 50% cover 50%
+// h2, h3, p {
+//     animation: CssScrollReveal ease-in-out both;
+//     animation-timeline: view();
+//     animation-range: entry 50% cover 50%
+// }
+
+img {
+    animation: FadeIn 1.5s ease-in-out forwards;
+}
+
+.fadein-first {
+    animation: FadeIn 0.5s ease-in-out forwards;
+}
+
+.fadein-second {
+    animation: FadeIn 1s ease-in-out forwards;
 }
 
 @keyframes CssScrollReveal {
@@ -12,5 +24,14 @@ h2, p {
     to {
 	opacity: 1;
 	transform: translateY(0);
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
