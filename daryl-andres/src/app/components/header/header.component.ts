@@ -15,9 +15,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    if (this.isNavBarOpen) {
-      this.isNavBarOpen = false;
-    };
+    this.isNavBarOpen = false;
     
     this.isScrolled = window.scrollY > 0;
   }

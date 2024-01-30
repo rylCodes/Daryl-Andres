@@ -5,21 +5,25 @@
             '-translate-x-full': !isScrolled
         }">
     </div>
-    <div class="relative w-full max-w-7xl mx-auto px-4 bg-transparent" [ngClass]="{'text-slate-900': isNavBarOpen || isScrolled}">
+    <div class="relative w-full max-w-7xl mx-auto px-4 bg-transparent">
         <div class="flex justify-between items-center w-full">
             <a href="/">
-                <div class="w-fit py-4" [ngClass]="{'img-white': !isNavBarOpen && !isScrolled, 'img-slate-950': isNavBarOpen || isScrolled}">
+                <div class="w-fit py-4 delay-100" [ngClass]="{'img-white': !isNavBarOpen && !isScrolled, 'img-slate-950': isNavBarOpen || isScrolled}">
                     <img class="w-14" src="../../../assets/img/d-icon-black.png" alt="">
                 </div>
             </a>
 
             <!-- Hamburger Menu -->
-            <div class="flex rounded-md px-2 py-1 cursor-pointer md:hidden" [ngClass]="{'border-2 border-slate-900': isNavBarOpen}">
-                <fa-icon *ngIf="!isNavBarOpen" class="hamburger-menu text-[30px] leading-none" [icon]="faBars" (click)="toggleNavBar()"></fa-icon>
-                <fa-icon *ngIf="isNavBarOpen" class="close-menu text-[36px] leading-none" [icon]="faXmark" (click)="toggleNavBar()"></fa-icon>
+            <div class="flex rounded-md px-2 py-1 transition-all duration-500 md:hidden" [ngClass]="{'text-slate-900': isNavBarOpen || isScrolled}">
+                <button *ngIf="!isNavBarOpen" class="text-[30px] leading-none" (click)="toggleNavBar()">
+                    <fa-icon [icon]="faBars"></fa-icon>
+                </button>
+                <button *ngIf="isNavBarOpen" class="text-[36px] leading-none" (click)="toggleNavBar()">
+                    <fa-icon [icon]="faXmark"></fa-icon>
+                </button>
             </div>
 
-            <nav class="hidden space-x-4 md:flex">
+            <nav class="hidden space-x-4 md:flex" [ngClass]="{'text-slate-900': isNavBarOpen || isScrolled}">
                 <a class="px-2 py-2 transition-all duration-300 cursor-pointer"
                     [ngClass]="isScrolled? 'hover:bg-gradient-to-r from-black to-slate-700 hover:text-white': 'hover:bg-white hover:text-slate-900'"
                     (click)="scrollTo('#about')">
@@ -46,7 +50,7 @@
     <!-- Navigation Bar for Smaller Screens -->    
     <div class="nav-container w-full h-auto block md:hidden">
         <nav [ngClass]="isNavBarOpen? 'translate-x-0' : 'translate-x-full'"
-            class="absolute w-full top-full left-0 flex flex-col space-y-2 transition-all duration-500 bg-white border border-white text-slate-900">
+            class="absolute w-full top-full left-0 flex flex-col space-y-2 transition-all duration-500 bg-white border-b text-slate-900">
             <a class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white"
                 (click)="scrollTo('#about')">
                 About
