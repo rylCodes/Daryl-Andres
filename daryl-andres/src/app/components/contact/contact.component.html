@@ -2,48 +2,37 @@
     <div class="w-full max-w-5xl mt-8 mx-auto">
         <h2 class="w-full font-extrabold text-3xl md:text-4xl">CONNECT WITH ME</h2>
         <form class="w-full mt-8" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-            <!-- First and Last Name -->
-            <div class="flex flex-col w-full mt-0 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row md:mt-4">
-                <div class="w-full">
-                    <input #firstnameInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
-                        [ngClass]="{'outline-red-500 border-red-500': !firstnameInput.value && firstnameInput.dirty}"
-                        [(ngModel)]="contactFormData.firstname" placeholder="First name *" type="text"
-                        name="first-name*" id="first-name" required>
-                    <small *ngIf="!firstnameInput.value && firstnameInput.dirty" class="text-red-500 px-2">
-                        This field is required!
-                    </small>
-                </div>
-                <div class="w-full">
-                    <input #lastNameInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
-                        [ngClass]="{'border-red-500': !lastNameInput.value && lastNameInput.dirty}"
-                        [(ngModel)]="contactFormData.lastname" placeholder="Last name *" type="text" name="last-name"
-                        id="last-name" required>
-                    <small *ngIf="!lastNameInput.value && lastNameInput.dirty" class="text-red-500 px-2">
-                        This field is required!
-                    </small>
-                </div>
+            <!-- Name -->
+            <div class="w-full mt-0 md:mt-4">
+                <input #name="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
+                    [ngClass]="{'border-red-500': !name.value && name.dirty}"
+                    [(ngModel)]="contactFormData.name" placeholder="Name *" type="text" name="name"
+                    id="name" required>
+                <small *ngIf="!name.value && name.dirty" class="text-red-500 px-2">
+                    This field is required!
+                </small>
             </div>
 
-            <!-- Email and Contact No. -->
-            <div class="flex flex-col w-full mt-4 space-y-4 space-x-0 md:space-y-0 md:space-x-4 md:flex-row">
-                <div class="w-full">
-                    <input #emailInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
-                        [ngClass]="{'border-red-500': (!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)}"
-                        [(ngModel)]="contactFormData.email" placeholder="Email *" type="email" name="email" id="email"
-                        required email>
-                    <small class="text-red-500 px-2"
-                        *ngIf="(!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)">
-                        This field is required! Please enter a valid email.
-                    </small>
-                </div>
-                <div class="w-full">
-                    <input [(ngModel)]="contactFormData.contact_number"
-                        class="bg-inherit border-2 w-full px-4 py-2 rounded-md" placeholder="Contact No." type="tel"
-                        name="contact_number" id="contact_number">
-                </div>
+            <!-- Email -->
+            <div class="w-full mt-4">
+                <input #emailInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
+                    [ngClass]="{'border-red-500': (!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)}"
+                    [(ngModel)]="contactFormData.email" placeholder="Email *" type="email" name="email" id="email"
+                    required email>
+                <small class="text-red-500 px-2"
+                    *ngIf="(!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)">
+                    This field is required! Please enter a valid email.
+                </small>
             </div>
 
-            <!-- Subject and Message -->
+            <!-- Contact No. -->
+            <div class="w-full mt-4">
+                <input [(ngModel)]="contactFormData.contact_number"
+                    class="bg-inherit border-2 w-full px-4 py-2 rounded-md" placeholder="Contact No." type="tel"
+                    name="contact_number" id="contact_number">
+            </div>
+
+            <!-- Subject -->
             <div class="w-full mt-4">
                 <input #subjectInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': !subjectInput.value && subjectInput.dirty}"
@@ -52,6 +41,8 @@
                 <small class="text-red-500 px-2" *ngIf="!subjectInput.value && subjectInput.dirty">This field is
                     required!</small>
             </div>
+            
+            <!-- Message -->
             <div class="w-full mt-4">
                 <textarea #messageInput="ngModel" class="bg-inherit border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': !messageInput.value && messageInput.dirty}"

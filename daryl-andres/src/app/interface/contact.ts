@@ -1,6 +1,5 @@
 export interface MessageData {
-    firstname: string,
-    lastname: string,
+    name: string,
     email: string,
     contact_number: string,
     subject: string,

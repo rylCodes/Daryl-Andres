@@ -13,8 +13,7 @@ export class ContactComponent {
   captchaResponse: string = ''
 
   contactFormData: MessageData = {
-    firstname: '',
-    lastname: '',
+    name: '',
     email: '',
     contact_number: '',
     subject: '',
@@ -39,11 +38,8 @@ export class ContactComponent {
       return;
     };
 
-    if (this.contactFormData.firstname.trim() === "") {
-      alert("Please enter your first name");
-      return;
-    } else if (this.contactFormData.lastname.trim() === "") {
-      alert("Please enter your last name");
+    if (this.contactFormData.name.trim() === "") {
+      alert("Please enter your name");
       return;
     } else if (this.contactFormData.email.trim() === "") {
       alert("Please enter a valid email");
@@ -51,7 +47,7 @@ export class ContactComponent {
     } else if (this.contactFormData.subject.trim() === "") {
       alert("Please enter a subject");
       return;
-    } else if (this.contactFormData.firstname.trim() === "") {
+    } else if (this.contactFormData.message.trim() === "") {
       alert("Please enter your message");
       return;
     };
