@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit, Renderer2, ElementRef } from '@angular/core';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,7 +8,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   faBars = faBars;
-  faXmark = faXmark;
+  faTimes = faTimes;
 
   isScrolled: boolean = false;
   isNavBarOpen: boolean = false;

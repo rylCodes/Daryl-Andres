@@ -33,7 +33,7 @@
             </div>
         </div>
 
-        <div class="category relative p-4 w-full mt-4">
+        <div class="category p-4 w-full mt-4">
             <!-- CERTIFICATIONS -->
             <h4 class="font-bold text-white bg-slate-900 text-xl text-center py-2 md:text-2xl">RELEVANT COURSES
             </h4>
@@ -110,26 +110,25 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Left Items ends here -->
+                        <!-- Sololearn ends here -->
                     </div>
                 </div>
             </div>
-
-            <!-- CERTIFICATE MODAL -->
-            <div *ngIf="certificateOnView"
-                class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.5)] p-4">
-                <div class="flex flex-col items-center w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
-                    <fa-icon
-                        class="self-end text-white text-xl font-bold leading-none cursor-pointer hover:text-slate-200 md:text-2xl"
-                        (click)="closeCertificate()" [icon]="faTimes">
-                    </fa-icon>
-                    <div class="flex flex-col items-center px-4 mt-2">
-                        <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
-                    </div>
-                    <div
-                        class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
-                        <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
-                    </div>
+        </div>
+        <!-- MODAL: Certificates -->
+        <div *ngIf="certificateOnView"
+            class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-[rgba(0,0,0,0.3)] p-4 z-10">
+            <div class="flex flex-col items-center w-full h-auto md:w-2/3 lg:w-1/2 mt-4">
+                <fa-icon
+                    class="self-end text-white text-xl font-bold leading-none cursor-pointer md:text-2xl"
+                    (click)="closeCertificate()" [icon]="faTimes">
+                </fa-icon>
+                <div class="flex flex-col items-center px-4 mt-2">
+                    <img class="certificateImg w-full h-auto" [src]="imgPath" alt="certificate">
+                </div>
+                <div
+                    class="mt-2 bg-gray-900 text-white font-semibold text-xs rounded-sm px-2 py-1 w-fit sm:text-sm">
+                    <a [href]="imgUrl" target="_blank">{{imgUrl}}</a>
                 </div>
             </div>
         </div>
