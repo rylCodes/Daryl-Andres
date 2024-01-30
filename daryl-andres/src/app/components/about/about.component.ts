@@ -24,22 +24,7 @@ export class AboutComponent implements OnInit {
 
   imgSrc: string = this.imgSrcArr[0];
 
-  constructor(private renderer: Renderer2) {}
-
   ngOnInit(): void {
-    this.loadWistiaVideos();
-  }
-
-  loadWistiaVideos() {
-    const script1 = this.renderer.createElement('script');
-    script1.src = 'https://fast.wistia.com/embed/medias/jpnvqur43w.jsonp';
-    script1.async = true;
-    this.renderer.appendChild(document.body, script1);
-
-    const script2 = this.renderer.createElement('script');
-    script2.src = 'https://fast.wistia.com/assets/external/E-v1.js'
-    script2.async = true;
-    this.renderer.appendChild(document.body, script2);
   }
 
   toggleLearnMore() {
