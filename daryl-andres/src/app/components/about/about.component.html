@@ -121,6 +121,7 @@
 
         <!-- Learn More/See Less Buttons -->
         <button (click)="toggleLearnMore()"
+            [ngClass]="{'mt-4': isLearnMoreClicked}"
             class="scroll-reveal font-bold text-slate-600 text-lg self-start hover:text-slate-900">
             {{!isLearnMoreClicked? 'Learn more about me...': 'See less...'}}
         </button>
