@@ -23,7 +23,9 @@ export class HeaderComponent implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    
+    if (window.scrollY > 0) {
+      this.isScrolled = true;
+    };
   }
 
   scrollTo(target: string): void {

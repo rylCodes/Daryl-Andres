@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
 }

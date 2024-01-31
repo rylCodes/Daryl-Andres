@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { ImageList } from '../../interface/about';
 
 @Component({
   selector: 'app-about',
@@ -12,19 +13,31 @@ export class AboutComponent implements OnInit {
 
   isLearnMoreClicked: boolean = false;
 
-  imgSrcArr: string[] = [
-    '../../../assets/img/nf2.jpeg',
-    '../../../assets/img/nf1.jpeg',
-    '../../../assets/img/nf3.jpeg',
-    '../../../assets/img/ksk2.jpeg',
-    '../../../assets/img/ksk1.jpeg',
-    '../../../assets/img/lpe1.jpeg',
-    '../../../assets/img/lpe2.jpeg',
-  ]
+  images: ImageList[] = [
+    {
+      description: '2023 Negosyo Forum - Antipolo City' ,
+      src: '../../../assets/img/nf2.jpeg' ,
+      url: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
+      display: 'block',
+    },
+    {
+      description: '2023 Negosyo Forum - Antipolo City' ,
+      src: '../../../assets/img/nf1.jpeg' ,
+      url: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
+      display: 'block'
+    },
+    {
+      description: '2023 Negosyo Forum - Antipolo City' ,
+      src: '../../../assets/img/nf3.jpeg' ,
+      url: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
+      display: 'block'
+    },
+  ];
 
-  imgSrc: string = this.imgSrcArr[0];
+  imagesTotalWidth: string = `${this.images.length *100}%`;
 
   ngOnInit(): void {
+    console.log(this.imagesTotalWidth);
   }
 
   toggleLearnMore() {

@@ -1,5 +1,5 @@
-<section id="about" class="w-full mx-auto py-16 px-4 bg-white">
-    <div class="flex flex-col w-full max-w-6xl mx-auto mt-8">
+<section id="about" class="w-full mx-auto py-20 px-4 bg-white scroll-m-20">
+    <div class="flex flex-col w-full max-w-6xl mx-auto">
         <h2 class="scroll-reveal font-extrabold text-3xl text-slate-800 md:text-4xl">ABOUT ME</h2>
         <div class="flex flex-col w-full space-y-4 my-6">
             <p class="scroll-reveal leading-7">
@@ -41,17 +41,25 @@
                 class=" flex flex-col w-full justify-between space-x-0 space-y-6 mt-6 md:flex-row md:space-x-6 md:space-y-0">
                 <!-- Left Item -->
                 <div class="w-full text-center md:w-1/2">
-                    <img class="opacity-0 w-full" [src]="imgSrc" alt="speaking engagement">
-                    <div class="w-full mt-1 italic text-sm">
-                        My speaking engagement during 
-                        <a href="https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/" target="_blank" class="font-semibold">'Negosyo Forum 2023'</a> 
-                        in Antipolo City
+                    <div class="overflow-hidden">
+                        <figure class="flex relative w-[{{imagesTotalWidth}}] m-0 left-0">
+                            <div class="flex flex-col w-full" *ngFor="let image of images" >
+                                <img class="opacity-0" src="{{image.src}}" alt="speaking engagement">
+                                <div class="w-full mt-1 italic text-sm">
+                                    <a href="{{image.url}}"
+                                        target="_blank"
+                                        class="font-semibold">
+                                        {{image.description}}
+                                    </a> 
+                                </div>
+                            </div>
+                        </figure>
                     </div>
                 </div>
                 <!-- Right Items -->
                 <div class="flex flex-col w-full space-y-4 md:w-1/2">
                     <p class="leading-7">
-                        In my role at the Department of Trade and Industry (DTI), I organized training sessions and
+                        In my role at the DTI-Rizal, I organized training sessions and
                         occasionally served as a speaker for entrepreneurial seminars.
                         Additionally, I provided assistance to MSME clients, guiding them through the business
                         registration
