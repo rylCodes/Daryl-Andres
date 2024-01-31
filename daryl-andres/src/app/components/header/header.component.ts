@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
 
   isScrolled: boolean = false;
   isNavBarOpen: boolean = false;
+  currentSection: string = '#home';
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
@@ -23,9 +24,6 @@ export class HeaderComponent implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    if (window.scrollY > 0) {
-      this.isScrolled = true;
-    };
   }
 
   scrollTo(target: string): void {
@@ -33,7 +31,8 @@ export class HeaderComponent implements OnInit {
 
     const elem = document.querySelector(target);
     if (elem) {
-      elem.scrollIntoView({ behavior: 'smooth' })
+      elem.scrollIntoView({ behavior: 'smooth' });
+      this.currentSection = target;
     };
   }
 

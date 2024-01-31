@@ -1,6 +1,5 @@
 export interface ImageList {
-    description: string,
-    url: string,
+    title: string,
+    reference: string,
     src: string,
-    display: string,
 }
