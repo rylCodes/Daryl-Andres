@@ -62,9 +62,9 @@
             </div>
         </div>
         <!-- Navigation Bar for Smaller Screens -->    
-        <div class="mobile-navbar relative w-full block md:hidden">
-            <nav [ngClass]="isNavBarOpen? 'translate-x-0' : 'translate-x-full'"
-                class="absolute w-full top-full left-0 flex flex-col space-y-2 transition-all duration-500 bg-white border-b text-slate-900">
+        <div class="relative w-full block md:hidden">
+            <nav #mobileMenu [ngClass]="isNavBarOpen? 'left-0' : 'left-full'"
+                class="absolute w-full top-full flex flex-col space-y-2 slide-back bg-white border-b text-slate-900">
                 <a href="#home" class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white">
                     Home
                 </a>

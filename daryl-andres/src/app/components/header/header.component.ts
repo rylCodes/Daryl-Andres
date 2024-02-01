@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { Component, HostListener, OnInit, Renderer2, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   faBars = faBars;
   faTimes = faTimes;
 
@@ -21,9 +21,16 @@ export class HeaderComponent implements OnInit {
     this.isScrolled = window.scrollY > 0;
   }
 
+  @ViewChild('mobileMenu') mobileMenu!: ElementRef;
+
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
+    // this.renderer.addClass(this.mobileMenu.nativeElement, 'bg-red-500');
+  }
+
+  ngAfterViewInit(): void {
+
   }
 
   scrollTo(target: string): void {
