@@ -26,11 +26,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    // this.renderer.addClass(this.mobileMenu.nativeElement, 'bg-red-500');
   }
 
   ngAfterViewInit(): void {
-
   }
 
   scrollTo(target: string): void {
