@@ -1,10 +1,10 @@
-<section id="contact" class="relative w-full bg-white py-20 px-4 text-slate-900 scroll-m-20">
+<section id="contact" class="relative w-full bg-slate-900 py-20 px-4 text-white scroll-m-20">
     <div class="w-full max-w-5xl mx-auto">
         <h2 class="w-full font-extrabold text-3xl md:text-4xl">CONNECT WITH ME</h2>
         <form class="w-full mt-8" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <!-- Name -->
             <div class="w-full mt-0 md:mt-4">
-                <input #name="ngModel" class="bg-inherit border-slate-900 border-2 w-full px-4 py-2 rounded-md"
+                <input #name="ngModel" class="bg-inherit border-white border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': !name.value && name.dirty}"
                     [(ngModel)]="contactFormData.name" placeholder="Name *" type="text" name="name"
                     id="name" required>
@@ -15,7 +15,7 @@
 
             <!-- Email -->
             <div class="w-full mt-4">
-                <input #emailInput="ngModel" class="bg-inherit border-slate-900 border-2 w-full px-4 py-2 rounded-md"
+                <input #emailInput="ngModel" class="bg-inherit border-white border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': (!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)}"
                     [(ngModel)]="contactFormData.email" placeholder="Email *" type="email" name="email" id="email"
                     required email>
@@ -28,13 +28,13 @@
             <!-- Contact No. -->
             <div class="w-full mt-4">
                 <input [(ngModel)]="contactFormData.contact_number"
-                    class="bg-inherit border-slate-900 border-2 w-full px-4 py-2 rounded-md" placeholder="Contact No." type="tel"
+                    class="bg-inherit border-white border-2 w-full px-4 py-2 rounded-md" placeholder="Contact No." type="tel"
                     name="contact_number" id="contact_number">
             </div>
 
             <!-- Subject -->
             <div class="w-full mt-4">
-                <input #subjectInput="ngModel" class="bg-inherit border-slate-900 border-2 w-full px-4 py-2 rounded-md"
+                <input #subjectInput="ngModel" class="bg-inherit border-white border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': !subjectInput.value && subjectInput.dirty}"
                     [(ngModel)]="contactFormData.subject" placeholder="Subject *" type="text" name="subject"
                     id="subject" required>
@@ -44,7 +44,7 @@
             
             <!-- Message -->
             <div class="w-full mt-4">
-                <textarea #messageInput="ngModel" class="bg-inherit border-slate-900 border-2 w-full px-4 py-2 rounded-md"
+                <textarea #messageInput="ngModel" class="bg-inherit border-white border-2 w-full px-4 py-2 rounded-md"
                     [ngClass]="{'border-red-500': !messageInput.value && messageInput.dirty}"
                     [(ngModel)]="contactFormData.message" placeholder="Message *" name="message" id="message" required
                     cols="30" rows="10"></textarea>
@@ -58,10 +58,12 @@
             </div>
 
             <!-- Submit Button -->
-            <button class="bg-slate-900 w-full px-10 py-3 rounded-md mt-4 text-white font-bold md:w-fit" type="submit"
+            <button class="flex space-x-3 border-white border-2 px-6 py-3 rounded-md mt-4 text-white font-bold transition-all duration-300"
+                type="submit"
                 [disabled]="contactForm.invalid && !this.captchaResponse"
-                [ngClass]="{'opacity-50': contactForm.invalid || !this.captchaResponse, 'opacity-100': contactForm.valid && this.captchaResponse}">
-                SEND MESSAGE
+                [ngClass]="{'opacity-50': contactForm.invalid || !this.captchaResponse, 'opacity-100 hover:bg-white hover:text-slate-900': contactForm.valid && this.captchaResponse}">
+                <fa-icon [icon]="faPaperPlane"></fa-icon>
+                <span>SEND MESSAGE</span>
             </button>
         </form>
     </div>

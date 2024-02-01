@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MessageData } from '../../interface/contact';
 import { MessageService } from '../../services/message/message.service';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,8 @@ import { MessageService } from '../../services/message/message.service';
 export class ContactComponent {
   sitekey: string = '6LfA8FwpAAAAAJQMFUAdYkbMuegK6bC55IjkVsK7'
   captchaResponse: string = ''
+
+  faPaperPlane = faPaperPlane;
 
   contactFormData: MessageData = {
     name: '',

@@ -64,7 +64,7 @@
         <!-- Navigation Bar for Smaller Screens -->    
         <div class="relative w-full block md:hidden">
             <nav #mobileMenu [ngClass]="isNavBarOpen? 'translate-x-0' : 'translate-x-full'"
-                class="fixed w-full top-20 left-0 flex flex-col transition-transform duration-300 space-y-2 slide-back bg-white border-b text-slate-900">
+                class="absolute w-full top-full left-0 flex flex-col transition-transform duration-300 space-y-2 slide-back bg-white border-b text-slate-900 md:hidden">
                 <a href="#home" class="px-2 py-4 transition-all duration-500 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-white">
                     Home
                 </a>
