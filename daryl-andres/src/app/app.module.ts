@@ -14,6 +14,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [ 
@@ -25,6 +26,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,
