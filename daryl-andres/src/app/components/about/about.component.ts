@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   faCircleChevronLeft = faCircleChevronLeft
   faCircleChevronRight =faCircleChevronRight
 
-  isLearnMoreClicked: boolean = true;
+  isLearnMoreClicked: boolean = false;
 
   index: number = 0;
 
