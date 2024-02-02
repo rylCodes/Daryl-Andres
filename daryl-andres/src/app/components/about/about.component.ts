@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { faCircleChevronLeft, faCircleChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { ImageList } from '../../interface/about';
 
 @Component({
@@ -8,8 +8,8 @@ import { ImageList } from '../../interface/about';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent implements OnInit {
-  faCircleChevronLeft = faCircleChevronLeft
-  faCircleChevronRight =faCircleChevronRight
+  faChevronLeft = faChevronLeft
+  faChevronRight = faChevronRight
 
   isLearnMoreClicked: boolean = false;
 
