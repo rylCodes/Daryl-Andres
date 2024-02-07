@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  isImageLoaded: boolean = false;
+
   ngOnInit() {
+  }
+
+  onImageLoad() {
+    this.isImageLoaded = true;
   }
 }

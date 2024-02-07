@@ -18,6 +18,20 @@ a.fade-in {
     animation: 1s fadeIn 1s ease-in-out forwards;
 }
 
+.placeholder {
+    width: 100%;
+    background-image: url('../../../assets/img/20px/dma_sm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    mix-blend-mode: overlay;
+    filter: blur(10px);
+}
+
+.placeholder-holder {
+    filter: none;
+    background-image: none;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;

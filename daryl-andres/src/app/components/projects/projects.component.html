@@ -15,10 +15,10 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[50%]">Angular, Typescript</li>
-                        <li class="dev-tool translate-x-[50%]">Django, Python</li>
-                        <li class="dev-tool translate-x-[50%]">Tailwindcss</li>
-                        <li class="dev-tool translate-x-[50%]">Postgresql</li>
+                        <li class="dev-tool translate-x-[25%]">Angular, Typescript</li>
+                        <li class="dev-tool translate-x-[25%]">Django, Python</li>
+                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
+                        <li class="dev-tool translate-x-[25%]">Postgresql</li>
                     </ul>
                 </div>
                 <div class="flex mt-10 space-x-2 w-full">
@@ -35,7 +35,13 @@
                 </div>
             </div>
             <div class="w-full md:flex-1">
-                <img class="" src="../../../assets/img/invenia_laptop_view.png" alt="">
+                <div [ngClass]="{placeholder: true, 'placeholder-loaded': isImageLoaded}">
+                    <img class="w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                        (load)="onImageLoad()"
+                        loading="lazy"
+                        src="../../../assets/img/invenia_laptop_view.png"
+                        alt="invenia sample photo">
+                </div>
             </div>
         </div>
 
@@ -53,8 +59,8 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[50%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool translate-x-[50%]">Tailwindcss</li>
+                        <li class="dev-tool translate-x-[25%]">HTML, CSS, JavaScript</li>
+                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
                     </ul>
                 </div>
                 <!-- Buttons -->
@@ -114,7 +120,7 @@
             </div>
         </div> -->
 
-        <!-- NC ANTIPOLO PORTAL -->
+        <!25 NC ANTIPOLO PORTAL -->
         <div
             class="project-container flex flex-col-reverse justify-between items-center mt-12 px-6 py-8 space-y-reverse space-y-4 rounded-xl border-2 border-white w-full md:flex-row md:space-x-6 md:space-y-0">
             <div class="w-full md:w-2/5">
@@ -130,9 +136,9 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[50%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool translate-x-[50%]">Django, Python</li>
-                        <li class="dev-tool translate-x-[50%]">Tailwindcss</li>
+                        <li class="dev-tool translate-x-[25%]">HTML, CSS, JavaScript</li>
+                        <li class="dev-tool translate-x-[25%]">Django, Python</li>
+                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
                     </ul>
                 </div>
                 <!-- Buttons -->

@@ -6,10 +6,23 @@
 
 .dev-tool {
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(3px);
     animation: ScrollSlideIn ease-in-out forwards;
     animation-timeline: view();
     animation-range: entry 50% cover 30%;
+}
+
+.placeholder {
+    width: 100%;
+    background-image: url('../../../assets/img/20px/invenia_laptop_view_sm.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.placeholder-loaded {
+    filter: none;
+    background-image: none;
 }
 
 @keyframes ScrollSlideIn {

@@ -10,4 +10,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 export class ProjectsComponent {
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faGithub = faGithub;
+
+  isImageLoaded = false;
+
+  onImageLoad() {
+    this.isImageLoaded = true;
+  }
 }
