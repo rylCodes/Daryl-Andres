@@ -11,7 +11,8 @@ export class AboutComponent implements OnInit {
   faChevronLeft = faChevronLeft
   faChevronRight = faChevronRight
 
-  isLearnMoreClicked: boolean = false;
+  isLearnMoreClicked: boolean = true;
+  isImageLoaded: boolean = false;
 
   index: number = 0;
 
@@ -83,5 +84,22 @@ export class AboutComponent implements OnInit {
       this.index = this.images.length - 1;
       this.currentImage = this.images[this.index];
     };
+  }
+
+  gotToExperience(target: string) {
+    this.isLearnMoreClicked = true;
+
+    setTimeout(() => {
+      const elem = document.querySelector(target);
+      if (this.isLearnMoreClicked) {
+        if (elem) {
+          elem.scrollIntoView({behavior: 'smooth'});
+        };
+      }
+    }, 100);
+  }
+
+  onImageLoad() {
+    this.isImageLoaded = true;
   }
 }
