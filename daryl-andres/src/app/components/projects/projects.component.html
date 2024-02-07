@@ -35,11 +35,10 @@
                 </div>
             </div>
             <div class="w-full md:flex-1">
-                <div [ngClass]="{placeholder: true, 'placeholder-loaded': isImageLoaded}">
-                    <img class="w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
-                        (load)="onImageLoad()"
-                        loading="lazy"
-                        src="../../../assets/img/invenia_laptop_view.png"
+                <div class="transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'invenia-img bg-repeat bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                        (load)="onImageLoad()" loading="lazy" src="../../../assets/img/invenia_laptop_view.png"
                         alt="invenia sample photo">
                 </div>
             </div>
@@ -53,7 +52,8 @@
                     QRLINK
                 </h4>
                 <p class="leading-7 mt-4">
-                    I built this using a JavaScript library for QR code customization and a third-party API for URL shortening, enabling efficient generation and customization of QR codes. 
+                    I built this using a JavaScript library for QR code customization and a third-party API for URL
+                    shortening, enabling efficient generation and customization of QR codes.
                     I developed this tool specifically for customized QR codes on DTI-Rizal's training posters.
                 </p>
                 <div class="mt-6">
@@ -79,7 +79,12 @@
             </div>
             <!-- Laptop Image -->
             <div class="w-full md:flex-1">
-                <img class="" src="../../../assets/img/qrlink_laptop_view.png" alt="">
+                <div class="transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'qrlink-img bg-repeat bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                        (load)="onImageLoad()" loading="lazy" src="../../../assets/img/qrlink_laptop_view.png"
+                        alt="invenia sample photo">
+                </div>
             </div>
         </div>
 
@@ -120,7 +125,7 @@
             </div>
         </div> -->
 
-        <!25 NC ANTIPOLO PORTAL -->
+        <!-- NC ANTIPOLO PORTAL -->
         <div
             class="project-container flex flex-col-reverse justify-between items-center mt-12 px-6 py-8 space-y-reverse space-y-4 rounded-xl border-2 border-white w-full md:flex-row md:space-x-6 md:space-y-0">
             <div class="w-full md:w-2/5">
@@ -157,7 +162,12 @@
             </div>
             <!-- Laptop Image -->
             <div class="w-full md:flex-1">
-                <img class="" src="../../../assets/img/nca-web_laptop_view.png" alt="">
+                <div class="transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'nca-web-img bg-repeat bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                        (load)="onImageLoad()" loading="lazy" src="../../../assets/img/nca-web_laptop_view.png"
+                        alt="invenia sample photo">
+                </div>
             </div>
         </div>
 

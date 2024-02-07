@@ -12,17 +12,16 @@
     animation-range: entry 50% cover 30%;
 }
 
-.placeholder {
-    width: 100%;
+.invenia-img {
     background-image: url('../../../assets/img/20px/invenia_laptop_view_sm.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: blur(10px);
 }
 
-.placeholder-loaded {
-    filter: none;
-    background-image: none;
+.qrlink-img {
+    background-image: url('../../../assets/img/20px/qrlink_laptop_view_sm.png');
+}
+
+.nca-web-img {
+    background-image: url('../../../assets/img/20px/nca-web_laptop_view_sm.png');
 }
 
 @keyframes ScrollSlideIn {
@@ -35,12 +34,13 @@
 
 @keyframes ScrollReveal {
     from {
-	opacity: 0;
-	transform: translateY(25%);
+        opacity: 0;
+        transform: translateY(25%);
     }
+
     to {
-	opacity: 1;
-	transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -52,11 +52,12 @@ h2 {
 
 @keyframes CssScrollReveal {
     from {
-	opacity: 0;
-	transform: translateY(100%);
+        opacity: 0;
+        transform: translateY(100%);
     }
+
     to {
-	opacity: 1;
-	transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
 }

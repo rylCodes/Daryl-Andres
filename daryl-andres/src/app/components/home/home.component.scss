@@ -1,7 +1,3 @@
-img.fade-in {
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
 p.slide-in-one {
     animation: slideIn 0.5s ease-in-out forwards;
 }
@@ -23,19 +19,14 @@ a.fade-in {
     background-image: url('../../../assets/img/20px/dma_sm.png');
     background-size: cover;
     background-repeat: no-repeat;
-    mix-blend-mode: overlay;
     filter: blur(10px);
-}
-
-.placeholder-holder {
-    filter: none;
-    background-image: none;
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -47,6 +38,7 @@ a.fade-in {
         // transform: translateY(100%);
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
         // transform: translateX(0);
