@@ -46,6 +46,10 @@ h3,
     border-color: transparent transparent #1e293b transparent;
 }
 
+.prev:hover > .left-icon, .next:hover > .right-icon {
+    opacity: 1;
+} 
+
 @keyframes CssScrollReveal {
     from {
         opacity: 0;

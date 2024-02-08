@@ -20,36 +20,43 @@ export class AboutComponent implements OnInit {
     {
       title: '2023 Negosyo Forum - Antipolo City Gov',
       src: '../../../assets/img/nf2.jpeg',
+      placeholder: '../../../assets/img/20px/nf2_sm.jpeg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: '2023 Negosyo Forum - Antipolo City Gov',
       src: '../../../assets/img/nf1.jpeg',
+      placeholder: '../../../assets/img/20px/nf1_sm.jpeg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: '2023 Negosyo Forum - Antipolo City Gov',
       src: '../../../assets/img/nf3.jpeg',
+      placeholder: '../../../assets/img/20px/nf3_sm.jpeg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: 'Kasabalikat Sa Kabuhayan Program - SM Foundation',
       src: '../../../assets/img/ksk1.jpg',
+      placeholder: '../../../assets/img/20px/ksk1_sm.jpg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: 'Kasabalikat Sa Kabuhayan Program - SM Foundation',
       src: '../../../assets/img/ksk2.jpg',
+      placeholder: '../../../assets/img/20px/ksk2_sm.jpg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: 'Local Peace Engagement - 80th Infantry (STEADFAST) Batallion',
       src: '../../../assets/img/lpe1.jpg',
+      placeholder: '../../../assets/img/20px/lpe1_sm.jpg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
     {
       title: 'Local Peace Engagement - 80th Infantry (STEADFAST) Batallion',
       src: '../../../assets/img/lpe2.jpg',
+      placeholder: '../../../assets/img/20px/lpe2_sm.jpg',
       reference: 'https://www.dti.gov.ph/regions/region-4a/region-4a-news/dti-rizal-engages-2023-negosyo-forum-foster-economic-resilience-antipolo-city/',
     },
   ];
@@ -67,6 +74,8 @@ export class AboutComponent implements OnInit {
   }
 
   nextImage() {
+    this.isImageLoaded = false;
+
     if (this.index < (this.images.length - 1)) {
       this.index += 1;
       this.currentImage = this.images[this.index];
@@ -77,6 +86,8 @@ export class AboutComponent implements OnInit {
   }
 
   previousImage() {
+    this.isImageLoaded = false;
+
     if (this.index > 0) {
       this.index -= 1;
       this.currentImage = this.images[this.index];

@@ -141,10 +141,8 @@
                 <div class="w-full md:w-1/2">
                     <div class="relative flex w-full text-center">
                         <figure class="fadein w-full">
-                            <div class="w-full" style="background-image: url(currentImage.src);"
-                                [ngClass]="isImageLoaded? 'blur-none': 'bg-cover bg-center blur'">
+                            <div class="w-full aspect-[4/3] bg-cover bg-center" [style.background-image]="'url(' + currentImage.placeholder + ')'">
                                 <img class="w-full aspect-[4/3] transition-all duration-300 opacity-0"
-                                    [ngClass]="{'opacity-100': isImageLoaded}"
                                     loading="lazy"
                                     (load)="onImageLoad()"
                                     [src]="currentImage.src" alt="speaking engagement">
@@ -152,22 +150,25 @@
                         </figure>
                         <div
                             class="absolute flex self-center justify-between items-center w-full px-2 text-2xl text-white">
-                            <div class="rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="previousImage()">
+                            <button class="prev rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="previousImage()">
                                 <fa-icon
-                                    class="cursor-pointer opacity-50 shadow-lg rounded-full leading-none transition-all duration-300 hover:opacity-75"
+                                    class="left-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
                                     [icon]="faChevronLeft">
                                 </fa-icon>
-                            </div>
-                            <div class="rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="nextImage()">
+                            </button>
+                            <button class="next rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="nextImage()">
                                 <fa-icon
-                                    class="cursor-pointer opacity-50 shadow-lg rounded-full leading-none transition-all duration-300 hover:opacity-75"
+                                    class="right-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
                                     [icon]="faChevronRight">
                                 </fa-icon>
-                            </div>
+                            </button>
                         </div>
                     </div>
                     <a [href]="currentImage.reference">
-                        <p class="text-center italic mt-2 text-sm font-semibold">{{currentImage.title}}</p>
+                        <p class="transition-all duration-500 opacity-0 text-center italic mt-2 text-sm font-semibold"
+                            [ngClass]="{'opacity-100': isImageLoaded}">
+                            {{currentImage.title}}
+                        </p>
                     </a>
                 </div>
                 <!-- Right Items -->
