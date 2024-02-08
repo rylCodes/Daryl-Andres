@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   faChevronLeft = faChevronLeft
   faChevronRight = faChevronRight
 
-  isLearnMoreClicked: boolean = true;
+  isLearnMoreClicked: boolean = false;
   isImageLoaded: boolean = false;
 
   index: number = 0;

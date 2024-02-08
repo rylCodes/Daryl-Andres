@@ -18,6 +18,7 @@ interface Certificate {
 })
 export class ResumeComponent implements OnInit {
   @ViewChild('certificateImg', {static: false}) certificateImg!: ElementRef;
+  @ViewChild('certDiv') certDiv!: ElementRef; 
 
   @HostListener('document:keyup.escape', ['$event'])
   onKeyUp(event: KeyboardEvent) {
@@ -67,12 +68,17 @@ export class ResumeComponent implements OnInit {
     this.imgPath = imgPath
     this.imgUrl = imgUrl;
     this.certificateOnView = true;
-    console.log("click works!")
   }
 
   closeCertificate() {
     this.certificateOnView =false;
     this.imgPath = ''
     this.imgUrl = '';
+  }
+
+  onClick(event: MouseEvent) {
+    if (!(event.target as HTMLElement).closest('#certDiv')) {
+      this.closeCertificate();
+    };
   }
 }

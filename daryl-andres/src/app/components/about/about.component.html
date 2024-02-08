@@ -10,10 +10,12 @@
             </p>
             <p class="scroll-reveal leading-7">
                 Having honed my technical skills as an independent learner, I am now eager to leverage my expertise in a collaborative team setting. 
-                My <button class="font-bold" (click)="gotToExperience('#experience')">background</button> has equipped me with strong project management and effective communication skills, and I am excited to contribute to a dynamic team environment.
+                <button class="font-bold text-slate-800" (click)="gotToExperience('#experience')">My background</button> has equipped me with strong project management and effective communication skills, and I am excited to contribute to a dynamic team environment.
                 I am confident in my ability to absorb insights from experienced professionals while actively adding value to projects.
             </p>
         </div>
+
+        <hr class="mt-6">
 
         <!-- Technologies I've Worked With -->
         <div class="w-full my-12 max-w-6xl mx-auto">
@@ -126,7 +128,7 @@
         <hr *ngIf="isLearnMoreClicked" class="mt-6">
 
         <!-- Professional Background -->
-        <div id="experience" *ngIf="isLearnMoreClicked" class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto scroll-m-[75px]">
+        <div id="experience" *ngIf="isLearnMoreClicked" class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto scroll-m-[125px]">
             <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">Professional Background</h3>
             <p class="leading-7">
                 Though my formal job experience may seem unrelated, I've developed a set of transferable skills that
@@ -139,9 +141,9 @@
                 <div class="w-full md:w-1/2">
                     <div class="relative flex w-full text-center">
                         <figure class="fadein w-full">
-                            <div style="background-image: url(currentImage.src);"
-                                [ngClass]="isImageLoaded? 'blur-none': 'bg-cover bg-no-repeat blur'">
-                                <img class="transition-all duration-300 opacity-0"
+                            <div class="w-full" style="background-image: url(currentImage.src);"
+                                [ngClass]="isImageLoaded? 'blur-none': 'bg-cover bg-center blur'">
+                                <img class="w-full aspect-[4/3] transition-all duration-300 opacity-0"
                                     [ngClass]="{'opacity-100': isImageLoaded}"
                                     loading="lazy"
                                     (load)="onImageLoad()"
@@ -244,7 +246,7 @@
 
         <!-- Learn More/See Less Buttons -->
         <button (click)="toggleLearnMore()" [ngClass]="{'mt-4': isLearnMoreClicked}"
-            class="scroll-reveal font-bold text-slate-600 text-lg self-start hover:text-slate-900">
+            class="scroll-reveal font-bold text-slate-800 text-lg self-start hover:text-slate-600">
             {{!isLearnMoreClicked? 'Learn more about me...': 'See less...'}}
         </button>
     </div>

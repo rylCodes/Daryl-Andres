@@ -15,10 +15,10 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[25%]">Angular, Typescript</li>
-                        <li class="dev-tool translate-x-[25%]">Django, Python</li>
-                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
-                        <li class="dev-tool translate-x-[25%]">Postgresql</li>
+                        <li class="dev-tool -translate-x-[25%]">Angular, Typescript</li>
+                        <li class="dev-tool -translate-x-[25%]">Django, Python</li>
+                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
+                        <li class="dev-tool -translate-x-[25%]">Postgresql</li>
                     </ul>
                 </div>
                 <div class="flex mt-10 space-x-2 w-full">
@@ -35,9 +35,9 @@
                 </div>
             </div>
             <div class="w-full md:flex-1">
-                <div class="transition-all duration-300"
-                    [ngClass]="!isImageLoaded? 'invenia-img bg-repeat bg-cover blur': 'blur-0'">
-                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                <div class="w-full transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'invenia-img bg-center bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0 aspect-video object-cover object-center" [ngClass]="{'opacity-100': isImageLoaded}"
                         (load)="onImageLoad()" loading="lazy" src="../../../assets/img/invenia_laptop_view.png"
                         alt="invenia sample photo">
                 </div>
@@ -59,8 +59,8 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[25%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
+                        <li class="dev-tool -translate-x-[25%]">HTML, CSS, JavaScript</li>
+                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
                     </ul>
                 </div>
                 <!-- Buttons -->
@@ -79,9 +79,9 @@
             </div>
             <!-- Laptop Image -->
             <div class="w-full md:flex-1">
-                <div class="transition-all duration-300"
-                    [ngClass]="!isImageLoaded? 'qrlink-img bg-repeat bg-cover blur': 'blur-0'">
-                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                <div class="w-full transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'qrlink-img bg-center bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0 aspect-video object-cover object-center" [ngClass]="{'opacity-100': isImageLoaded}"
                         (load)="onImageLoad()" loading="lazy" src="../../../assets/img/qrlink_laptop_view.png"
                         alt="invenia sample photo">
                 </div>
@@ -107,7 +107,7 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[50%] md:translate-x-[25%]">HTML, CSS, JavaScript</li>
+                        <li class="dev-tool translate-x-[50%] md:-translate-x-[25%]">HTML, CSS, JavaScript</li>
                     </ul>
                 </div>
                 <div class="flex mt-10 space-x-2 w-full">
@@ -141,9 +141,9 @@
                 <div class="mt-6">
                     <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
                     <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool translate-x-[25%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool translate-x-[25%]">Tailwindcss</li>
-                        <li class="dev-tool translate-x-[25%]">Django, Python</li>
+                        <li class="dev-tool -translate-x-[25%]">HTML, CSS, JavaScript</li>
+                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
+                        <li class="dev-tool -translate-x-[25%]">Django, Python</li>
                     </ul>
                 </div>
                 <!-- Buttons -->
@@ -162,9 +162,9 @@
             </div>
             <!-- Laptop Image -->
             <div class="w-full md:flex-1">
-                <div class="transition-all duration-300"
-                    [ngClass]="!isImageLoaded? 'nca-web-img bg-repeat bg-cover blur': 'blur-0'">
-                    <img class="transition-all duration-500 w-full opacity-0" [ngClass]="{'opacity-100': isImageLoaded}"
+                <div class="w-full transition-all duration-300"
+                    [ngClass]="!isImageLoaded? 'nca-web-img bg-center bg-cover blur': 'blur-0'">
+                    <img class="transition-all duration-500 w-full opacity-0 aspect-video object-cover object-center" [ngClass]="{'opacity-100': isImageLoaded}"
                         (load)="onImageLoad()" loading="lazy" src="../../../assets/img/nca-web_laptop_view.png"
                         alt="invenia sample photo">
                 </div>
