@@ -11,10 +11,13 @@ export class AboutComponent implements OnInit {
   faChevronLeft = faChevronLeft
   faChevronRight = faChevronRight
 
-  isLearnMoreClicked: boolean = false;
+  isLearnMoreClicked: boolean = false;;
   isImageLoaded: boolean = false;
 
   index: number = 0;
+
+  currentImage!: ImageList;
+  imgSrc = '';
 
   images: ImageList[] = [
     {
@@ -61,10 +64,6 @@ export class AboutComponent implements OnInit {
     },
   ];
 
-  currentImage!: ImageList;
-
-  imagesTotalWidth: string = `${this.images.length *100}%`;
-
   ngOnInit(): void {
     this.currentImage = this.images[this.index];
   }
@@ -75,6 +74,7 @@ export class AboutComponent implements OnInit {
 
   nextImage() {
     this.isImageLoaded = false;
+    this.imgSrc = '';
 
     if (this.index < (this.images.length - 1)) {
       this.index += 1;
@@ -83,6 +83,8 @@ export class AboutComponent implements OnInit {
       this.index = 0;
       this.currentImage = this.images[this.index];
     };
+
+    this.imgSrc = this.currentImage.src
   }
 
   previousImage() {

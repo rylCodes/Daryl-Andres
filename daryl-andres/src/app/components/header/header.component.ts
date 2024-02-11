@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit, Renderer2, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, HostListener, AfterViewInit, ChangeDetectorRef, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +7,7 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewInit {
+export class HeaderComponent implements AfterViewInit {
   faBars = faBars;
   faTimes = faTimes;
 
@@ -21,14 +22,15 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     this.isScrolled = window.scrollY > 0;
   }
 
-  @ViewChild('mobileMenu') mobileMenu!: ElementRef;
-
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
-
-  ngOnInit(): void {
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: object, private cdr: ChangeDetectorRef) {}
 
   ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      if (window.scrollY > 0) {
+        this.isScrolled = true;
+        this.cdr.detectChanges();
+      };
+    }
   }
 
   scrollTo(target: string): void {

@@ -47,10 +47,6 @@
                             <img class="w-14 md:w-16" src="../../../assets/tech-icon/css.png" alt="css icon">
                             <span class="tooltip whitespace-nowrap">CSS</span>
                         </div>
-                        <!-- <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/scss.png" alt="scss icon">
-                            <span class="tooltip whitespace-nowrap">SCSS</span>
-                        </div> -->
                         <div class="tech-icon">
                             <img class="w-14 md:w-16" src="../../../assets/tech-icon/javascript.png" alt="javascript icon">
                             <span class="tooltip whitespace-nowrap">JavaScript</span>
@@ -141,8 +137,10 @@
                 <div class="w-full md:w-1/2">
                     <div class="relative flex w-full text-center">
                         <figure class="fadein w-full">
-                            <div class="w-full aspect-[4/3] bg-cover bg-center" [style.background-image]="'url(' + currentImage.placeholder + ')'">
-                                <img class="w-full aspect-[4/3] transition-all duration-300 opacity-0"
+                            <div class="transition-all duration-300 w-full bg-cover bg-center blur" [style.background-image]="'url(' + currentImage.placeholder + ')'"
+                                [ngClass]="{'blur-0': isImageLoaded}">
+                                <img class="w-full aspect-[4/3] opacity-0"
+                                    [ngClass]="{'opacity-100': isImageLoaded}"
                                     loading="lazy"
                                     (load)="onImageLoad()"
                                     [src]="currentImage.src" alt="speaking engagement">

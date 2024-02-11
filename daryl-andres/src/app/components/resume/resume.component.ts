@@ -76,9 +76,10 @@ export class ResumeComponent implements OnInit {
   }
 
   viewCertificate(imgPath: string, imgUrl: string, placeholderPath: string) {
+    this.isImageLoaded = false;
+    this.placeholderPath = placeholderPath;
     this.imgPath = imgPath
     this.imgUrl = imgUrl;
-    this.placeholderPath = placeholderPath;
     this.certificateOnView = true;
   }
 
