@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, Renderer2, ViewChild, HostListener } from '@angular/core';
-import { faImage, faDownload, faTimes, faCertificate } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faDownload, faTimes, faCertificate, faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 interface Certificate {
   html: string;
@@ -14,7 +14,7 @@ interface Certificate {
 @Component({
   selector: 'app-resume',
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.scss'] // Corrected property name to styleUrls
+  styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent implements OnInit {
   @ViewChild('certDiv') certDiv!: ElementRef; 
@@ -32,6 +32,7 @@ export class ResumeComponent implements OnInit {
   faDownload = faDownload;
   faTimes = faTimes;
   faCertificate = faCertificate;
+  faFileArrowDown = faFileArrowDown;
 
   certificateOnView: boolean = false;
   isImageLoaded: boolean = false;

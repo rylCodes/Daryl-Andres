@@ -5,6 +5,42 @@ h2,
     animation-range: entry 50% cover 40%
 }
 
+.download-icon {
+    position: relative;
+}
+
+.download-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.download-icon .tooltip {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #1e293b;
+    transition: all 500ms;
+    z-index: 1;
+}
+
+.download-icon .tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #1e293b transparent;
+}
+
 @keyframes ScrollReveal {
     from {
 	opacity: 0;
