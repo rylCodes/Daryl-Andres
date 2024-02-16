@@ -20,8 +20,8 @@
                     [(ngModel)]="contactFormData.email" placeholder="Email *" type="email" name="email" id="email"
                     required email>
                 <small class="text-red-500 px-2"
-                    *ngIf="(!emailInput.value && emailInput.dirty) || (emailInput.touched && emailInput.invalid)">
-                    This field is required! Please enter a valid email.
+                    *ngIf="emailInput.dirty && (!emailInput.value || (emailInput.touched && emailInput.invalid))">
+                    {{ emailInput.invalid && emailInput.value ? 'Please enter a valid email address.' : 'This field is required!' }}
                 </small>
             </div>
 
