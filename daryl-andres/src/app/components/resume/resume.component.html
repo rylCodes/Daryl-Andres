@@ -49,14 +49,62 @@
             </h4>
             <div class="w-full border shadow-lg p-4">
                 <!-- WEB DEVELOPMENT -->
-                <div class="w-full">
-                    <div class="flex flex-col w-full px-4 md:flex-row">
+                <div class="flex flex-col w-full gap-4 md:flex-row">
+                    <div class="flex flex-col w-full gap-4 md:w-1/2">
+                        <!-- DICT -->
+                        <div class="w-full">
+                            <h6 class="font-bold">DICT | Course Certificate</h6>
+                            <div class="flex flex-col">
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Developing a Static Website</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.staticWebsite, certURL.staticWebsite, certPlaceholder.staticWebsite)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Basic JavaScript for Web Development</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.basicJS, certURL.basicJS, certPlaceholder.basicJS)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Build Python Web Apps with Flask</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.flask, certURL.flask, certPlaceholder.flask)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Programming for Intermediate Users using Python</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.pythonIntermediate, certURL.pythonIntermediate, certPlaceholder.pythonIntermediate)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Programming for Beginners Using Python</p>
+                                    <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
+                                        (click)="viewCertificate(certImgPath.pythonBeginner, certURL.pythonBeginner, certPlaceholder.pythonBeginner)">
+                                        <fa-icon [icon]="faCertificate"></fa-icon>
+                                        <span>VIEW</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- DICT ends here -->
+
                         <!-- Freecodecamp -->
                         <div class="w-full">
                             <h6 class="font-bold">FREECODECAMP | Developer Certification</h6>
                             <div class="flex flex-col">
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Responsive Web Design</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Responsive Web Design</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.responsiveWebDesign, certURL.responsiveWebDesign, certPlaceholder.responsiveWebDesign)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
@@ -65,53 +113,56 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Freecodecamp ends here -->                                           
+                    </div>
 
+                    <div class="flex flex-col w-full gap-4 md:w-1/2">
                         <!-- Sololearn -->
-                        <div class="w-full mt-2 md:mt-0">
+                        <div class="w-full">
                             <h6 class="font-bold">SOLOLEARN | Course Certificate</h6>
                             <div class="flex flex-col">
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Angular + NestJS</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Angular + NestJS</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.angularNetJs, certURL.angularNetJs, certPlaceholder.angularNetJs)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to Python</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Introduction to Python</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.python, certURL.python, certPlaceholder.python)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Python Data Structures</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Python Data Structures</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.pythonDataStructure, certURL.pythonDataStructure, certPlaceholder.pythonDataStructure)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to HTML</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Introduction to HTML</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.html, certURL.html, certPlaceholder.html)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to CSS</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Introduction to CSS</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.css, certURL.css, certPlaceholder.css)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
                                         <span>VIEW</span>
                                     </div>
                                 </div>
-                                <div class="flex justify-between items-center md:justify-normal">
-                                    <p class="w-auto md:w-1/2">Introduction to JavaScript</p>
+                                <div class="flex items-center">
+                                    <p class="w-full md:w-5/6">Introduction to JavaScript</p>
                                     <div class="cursor-pointer flex items-center space-x-1 bg-slate-600 text-xs leading-none text-white w-auto p-1 rounded-sm"
                                         (click)="viewCertificate(certImgPath.js, certURL.js, certPlaceholder.js)">
                                         <fa-icon [icon]="faCertificate"></fa-icon>
@@ -159,12 +210,12 @@
                 <div class="w-full space-y-2 md:w-1/2">
                     <!-- Work Experience -->
                     <h5 class="font-extrabold text-slate-800 text-lg md:text-xl">WORK EXPERIENCE:</h5>
-                    <div class="px-6">
+                    <div>
                         <h6 class="font-bold">BUSINESS COUNSELOR</h6>
                         <p>DTI-Rizal - Negosyo Center Antipolo City</p>
                         <p>March 2021 - Present</p>
                     </div>
-                    <div class="px-6">
+                    <div>
                         <h6 class="font-bold">SALES ASSISTANT</h6>
                         <p>ACE Hardware Phils Inc. - SM Cherry Antipolo</p>
                         <p>October 2019 - February 2021</p>
@@ -173,12 +224,12 @@
                 <div class="w-full space-y-2 md:w-1/2">
                     <!-- Education -->
                     <h5 class="font-extrabold text-slate-800 text-lg md:text-xl">EDUCATION:</h5>
-                    <div class="px-6">
+                    <div>
                         <h6 class="font-bold">BSBA - MARKETING MANAGEMENT</h6>
                         <p>ICCT Colleges Foundation Inc. - Antipolo City</p>
                         <p>Graduated - December 2019</p>
                     </div>
-                    <!-- <div class="px-6">
+                    <!-- <div>
                         <h6 class="font-bold">CERTIFICATE IN TEACHING PROGRAM (SECONDARY)</h6>
                         <p>ICCT Colleges Foundation Inc. - Antipolo City</p>
                         <p>2021</p>
