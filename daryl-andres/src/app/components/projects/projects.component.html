@@ -1,141 +1,74 @@
-<section id="projects" class="w-full mx-auto bg-gray-900 py-20 text-white scroll-m-[75px]">
-    <div class="w-full max-w-7xl px-4 mx-auto">
-        <h2 class="w-full font-extrabold text-3xl md:text-4xl">PERSONAL PROJECTS</h2>
-        <!-- INVENIA+ -->
-        <div
-            class="project-container flex flex-col-reverse justify-between items-center mt-12 px-6 py-8 space-y-reverse space-y-4 rounded-xl border-2 border-white w-full md:flex-row md:space-x-6 md:space-y-0">
-            <div class="w-full md:w-2/5">
-                <h4 class="font-extrabold text-3xl text-center md:text-4xl">
-                    INVENIA+
-                </h4>
-                <p class="leading-7 mt-4">
-                    Invenia+ is my first Angular project. An inventory management system with POS.
-                    Future plans include online payment integration for enhanced functionality.
-                </p>
-                <div class="mt-6">
-                    <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
-                    <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool -translate-x-[25%]">Angular, Typescript</li>
-                        <li class="dev-tool -translate-x-[25%]">Django, Python</li>
-                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
-                        <li class="dev-tool -translate-x-[25%]">Postgresql</li>
-                    </ul>
-                </div>
-                <div class="flex mt-10 space-x-2 w-full">
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://invenia.darylandres.com/">
-                        <span class="text-sm sm:text-base">VISIT SITE</span>
-                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
-                    </a>
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://github.com/rylCodes/Inventory-Management-System">
-                        <span class="text-sm sm:text-base">VIEW CODE</span>
-                        <fa-icon class="text-lg" [icon]="faGithub"></fa-icon>
-                    </a>
-                </div>
-            </div>
-            <div class="w-full md:flex-1">
-                <div class="w-full">
-                    <img class="w-full opacity-0 aspect-video transition-all duration-500"
-                        [ngClass]="{'opacity-100': isImageLoaded}"
-                        (load)="onImageLoad()" loading="lazy"
-                        src="../../../assets/img/invenia_laptop_view.png"
-                        alt="invenia sample photo">
-                </div>
-            </div>
-        </div>
+<section
+  id="projects"
+  class="w-full mx-auto bg-slate-900 py-20 text-slate-50 scroll-m-[75px]"
+>
+  <div class="w-full max-w-7xl px-4 mx-auto">
+    <h2 class="w-full font-extrabold text-3xl md:text-4xl text-center mb-12">
+      Personal Projects
+    </h2>
 
-        <!-- QRLink -->
-        <div
-            class="project-container flex flex-col-reverse justify-between items-center mt-12 px-6 py-8 space-y-reverse space-y-4 rounded-xl border-2 border-white w-full md:flex-row md:space-x-6 md:space-y-0">
-            <div class="w-full md:w-2/5">
-                <h4 class="font-extrabold text-3xl text-center md:text-4xl">
-                    QRLINK
-                </h4>
-                <p class="leading-7 mt-4">
-                    I built this using a JavaScript library for QR code customization and a third-party API for URL
-                    shortening, enabling efficient generation and customization of QR codes.
-                    I developed this tool specifically for customized QR codes on DTI-Rizal's training posters.
-                </p>
-                <div class="mt-6">
-                    <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
-                    <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool -translate-x-[25%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
-                    </ul>
-                </div>
-                <!-- Buttons -->
-                <div class="flex mt-10 space-x-2 w-full">
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://qrlink-maker.darylandres.com/">
-                        <span class="text-sm sm:text-base">VISIT SITE</span>
-                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
-                    </a>
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://github.com/rylCodes/qrcode-generator">
-                        <span class="text-sm sm:text-base">VIEW CODE</span>
-                        <fa-icon class="text-lg" [icon]="faGithub"></fa-icon>
-                    </a>
-                </div>
+    <div class="grid gap-12">
+      @for (project of projects; track project.title) {
+      <div
+        class="project-container bg-slate-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300"
+      >
+        <div class="flex flex-col md:flex-row">
+          <div
+            class="w-full md:w-1/2 relative overflow-hidden img-magnifier-container"
+          >
+            <img
+              #projectImage
+              [id]="project.title + '-image'"
+              class="myimage w-full h-full object-cover aspect-video transition-opacity duration-500 cursor-none"
+              [ngClass]="{
+                'opacity-100': isImageLoaded,
+                'opacity-0': !isImageLoaded
+              }"
+              (load)="onImageLoad()"
+              [src]="project.image.src"
+              [alt]="project.image.alt"
+              loading="lazy"
+            />
+          </div>
+          <div class="w-full md:w-1/2 p-6 flex flex-col justify-between">
+            <div>
+              <h4 class="font-bold text-2xl md:text-3xl mb-4">
+                {{ project.title }}
+              </h4>
+              <p class="text-slate-300 mb-6">{{ project.description }}</p>
+              <div>
+                <h5 class="text-lg font-medium mb-2">Development Tools</h5>
+                <ul class="flex flex-wrap gap-2">
+                  @for (tool of project.tools; track $index) {
+                  <li class="bg-slate-700 px-3 py-1 rounded-full text-sm">
+                    {{ tool.name }}
+                  </li>
+                  }
+                </ul>
+              </div>
             </div>
-            <!-- Laptop Image -->
-            <div class="w-full md:flex-1">
-                <div class="w-full">
-                    <img class="w-full opacity-0 aspect-video transition-all duration-500"
-                        [ngClass]="{'opacity-100': isImageLoaded}"
-                        (load)="onImageLoad()" loading="lazy"
-                        src="../../../assets/img/qrlink_laptop_view.png"
-                        alt="invenia sample photo">
-                </div>
+            <div class="flex gap-4 mt-6">
+              <a
+                class="flex-1 flex justify-center items-center gap-2 py-3 rounded-md bg-slate-50 text-slate-900 font-bold hover:bg-slate-200 transition-colors duration-300"
+                [href]="project.links.site"
+                target="_blank"
+              >
+                <span>Visit Site</span>
+                <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+              </a>
+              <a
+                class="flex-1 flex justify-center items-center gap-2 py-3 rounded-md bg-slate-700 font-bold hover:bg-slate-600 transition-colors duration-300"
+                [href]="project.links.github"
+                target="_blank"
+              >
+                <span>View Code</span>
+                <fa-icon [icon]="faGithub"></fa-icon>
+              </a>
             </div>
+          </div>
         </div>
-
-        <!-- NC ANTIPOLO PORTAL -->
-        <div
-            class="project-container flex flex-col-reverse justify-between items-center mt-12 px-6 py-8 space-y-reverse space-y-4 rounded-xl border-2 border-white w-full md:flex-row md:space-x-6 md:space-y-0">
-            <div class="w-full md:w-2/5">
-                <h4 class="font-extrabold text-3xl text-center md:text-4xl">
-                    NC ANTIPOLO PORTAL
-                </h4>
-                <p class="leading-7 mt-4">
-                    This website is a mock/prototype derived from the official DTI Negosyo Center Online portal, but
-                    exclusively for Negosyo Center in Antipolo.
-                    It is designed for demonstration purposes, showcasing skills in design and conceptualization, and
-                    does not represent a fully operational system.
-                </p>
-                <div class="mt-6">
-                    <h5 class="text-lg font-medium">DEVELOPMENT TOOLS</h5>
-                    <ul class="px-6 mt-2 space-y-1 list-disc">
-                        <li class="dev-tool -translate-x-[25%]">HTML, CSS, JavaScript</li>
-                        <li class="dev-tool -translate-x-[25%]">Tailwindcss</li>
-                        <li class="dev-tool -translate-x-[25%]">Django, Python</li>
-                    </ul>
-                </div>
-                <!-- Buttons -->
-                <div class="flex mt-10 space-x-2 w-full">
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://negosyocenter-antipolo.azurewebsites.net/">
-                        <span class="text-sm sm:text-base">VISIT SITE</span>
-                        <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
-                    </a>
-                    <a class="flex justify-center items-center space-x-2 w-1/2 text-center py-4 rounded-md border-white border-2 font-bold hover:bg-white hover:text-slate-900 transition-all duration-300"
-                        target="_blank" href="https://github.com/rylCodes/nc-antipolo-website">
-                        <span class="text-sm sm:text-base">VIEW CODE</span>
-                        <fa-icon class="text-lg" [icon]="faGithub"></fa-icon>
-                    </a>
-                </div>
-            </div>
-            <!-- Laptop Image -->
-            <div class="w-full md:flex-1">
-                <div class="w-full">
-                    <img class="w-full opacity-0 aspect-video transition-all duration-500"
-                        [ngClass]="{'opacity-100': isImageLoaded}"
-                        (load)="onImageLoad()" loading="lazy"
-                        src="../../../assets/img/nca-web_laptop_view.png"
-                        alt="invenia sample photo">
-                </div>
-            </div>
-        </div>
-
+      </div>
+      }
     </div>
+  </div>
 </section>
