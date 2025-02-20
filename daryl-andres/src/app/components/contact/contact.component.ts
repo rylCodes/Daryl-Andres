@@ -1,19 +1,45 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { MessageData } from '../../interface/contact';
-import { MessageService } from '../../services/message/message.service';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import type { MessageData } from '../../interface/contact';
+import { MessageService } from '@services/message/message.service';
+import {
+  faPaperPlane,
+  faUser,
+  faEnvelope,
+  faPhone,
+  faPencilAlt,
+} from '@fortawesome/free-solid-svg-icons';
+import { environment } from '@env/environment';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgClass, NgIf } from '@angular/common';
+import { RecaptchaModule } from 'ng-recaptcha';
+
+declare var grecaptcha: any;
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
+  imports: [FontAwesomeModule, NgClass, NgIf, RecaptchaModule, FormsModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styles: [
+    `
+      :host {
+        display: block;
+      }
+    `,
+  ],
 })
 export class ContactComponent {
-  sitekey: string = '6LfA8FwpAAAAAJQMFUAdYkbMuegK6bC55IjkVsK7'
-  captchaResponse: string = ''
+  messageService = inject(MessageService);
+
+  sitekey: string = environment.recaptchaSiteKey;
+  captchaResponse = '';
 
   faPaperPlane = faPaperPlane;
+  faUser = faUser;
+  faEnvelope = faEnvelope;
+  faPhone = faPhone;
+  faPencilAlt = faPencilAlt;
 
   contactFormData: MessageData = {
     name: '',
@@ -22,11 +48,9 @@ export class ContactComponent {
     subject: '',
     message: '',
     captchaResponse: '',
-  }
+  };
 
-  isLoading: boolean = false;
-
-  constructor(private messageService: MessageService) {}
+  isLoading = false;
 
   resolved(captchaResponse: string | null) {
     if (captchaResponse) {
@@ -39,27 +63,19 @@ export class ContactComponent {
     if (!this.contactFormData.captchaResponse) {
       alert('Oops! It seems there was an issue with the reCAPTCHA');
       return;
-    };
+    }
 
-    if (this.contactFormData.name.trim() === "") {
-      alert("Please enter your name");
+    if (contactForm.invalid) {
       return;
-    } else if (this.contactFormData.email.trim() === "") {
-      alert("Please enter a valid email");
-      return;
-    } else if (this.contactFormData.subject.trim() === "") {
-      alert("Please enter a subject");
-      return;
-    } else if (this.contactFormData.message.trim() === "") {
-      alert("Please enter your message");
-      return;
-    };
+    }
 
     this.isLoading = true;
     this.messageService.sendMessage(this.contactFormData).subscribe({
       next: (data) => {
         this.isLoading = false;
-        alert(`It's great to hear from you. I'll get back to you as soon as possible.`);
+        alert(
+          `It's great to hear from you. I'll get back to you as soon as possible.`
+        );
         contactForm.resetForm();
         this.contactFormData.captchaResponse = '';
         this.captchaResponse = '';
@@ -71,7 +87,7 @@ export class ContactComponent {
         this.contactFormData.captchaResponse = '';
         this.captchaResponse = '';
         grecaptcha.reset();
-      }
-    })
+      },
+    });
   }
 }

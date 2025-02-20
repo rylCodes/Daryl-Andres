@@ -1,253 +1,279 @@
-<section id="about" class="w-full mx-auto py-20 px-4 bg-white scroll-m-[75px]">
-    <div class="flex flex-col w-full max-w-6xl mx-auto">
-        <h2 class="scroll-reveal font-extrabold text-3xl text-slate-800 md:text-4xl">ABOUT ME</h2>
-        <div class="flex flex-col w-full space-y-4 my-6">
-            <p class="scroll-reveal leading-7">
-                Hello there! I'm Daryl Andres, a passionate individual who became a web developer through self-study.
-                I'm on a journey of continuous learning in the vast world of web development.
-                While my professional experience is not directly aligned with this field, my dedication has driven me to
-                create several personal projects that demonstrate my skills and passion for coding.
-            </p>
-            <p class="scroll-reveal leading-7">
-                Having honed my technical skills as an independent learner, I am now eager to leverage my expertise in a collaborative team setting. 
-                <button class="font-bold text-slate-800" (click)="gotToExperience('#experience')">My background</button> has equipped me with strong project management and effective communication skills, and I am excited to contribute to a dynamic team environment.
-                I am confident in my ability to absorb insights from experienced professionals while actively adding value to projects.
-            </p>
-        </div>
-
-        <hr class="mt-6">
-
-        <!-- Technologies I've Worked With -->
-        <div class="w-full my-12 max-w-6xl mx-auto">
-            <h3 class="scroll-reveal font-extrabold text-2xl text-slate-800 md:text-3xl">Technologies I've worked with
-            </h3>
-            <!-- FRONTEND / BACKEND -->
-            <div class="flex flex-col space-x-0 space-y-4 w-full mt-6 md:flex-row md:space-x-4 md:space-y-0">
-                <!-- Frontend -->
-                <div class="w-full shadow-md border scroll-reveal md:w-1/2">
-                    <h4 class="bg-slate-900 text-white py-1 text-center font-bold">FRONTEND</h4>
-                    <div class="flex flex-wrap justify-center items-center gap-4 py-4 md:space-y-0">
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/angular.png" alt="angular icon">
-                            <span class="tooltip whitespace-nowrap">Angular</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/tailwindcss.png" alt="tailwindcss icon">
-                            <span class="tooltip whitespace-nowrap">Tailwind CSS</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/typescript.png" alt="typescript icon">
-                            <span class="tooltip whitespace-nowrap">TypeScript</span>
-                        </div> 
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/html.png" alt="html icon">
-                            <span class="tooltip whitespace-nowrap">HTML</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/css.png" alt="css icon">
-                            <span class="tooltip whitespace-nowrap">CSS</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/javascript.png" alt="javascript icon">
-                            <span class="tooltip whitespace-nowrap">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Backend -->
-                <div class="w-full shadow-md border scroll-reveal md:w-1/2">
-                    <h4 class="bg-slate-900 text-white py-1 text-center font-bold">BACKEND</h4>
-                    <div class="flex flex-wrap justify-center items-center space-x-4 py-4">
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/python.png" alt="python icon">
-                            <span class="tooltip whitespace-nowrap">Python</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/django.png" alt="django icon">
-                            <span class="tooltip whitespace-nowrap">Django</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/django-rest-framework.png"
-                                alt="django-rest-framework icon">
-                            <span class="tooltip whitespace-nowrap">Django-Rest-Framework</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/postgresql.png" alt="postgresql icon">
-                            <span class="tooltip whitespace-nowrap">PostgreSQL</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- DEVOPS / TOOLS -->
-            <div class="flex flex-col space-x-0 space-y-4 w-full mt-4 md:flex-row md:space-x-4 md:space-y-0">
-                <div class="w-full shadow-md border scroll-reveal md:w-1/2">
-                    <h4 class="bg-slate-900 text-white py-1 text-center font-bold">DEVOPS</h4>
-                    <div class="flex flex-wrap justify-center items-center space-x-4 py-4">
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/git.png" alt="Git icon">
-                            <span class="tooltip whitespace-nowrap">Git</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/github.png" alt="Github icon">
-                            <span class="tooltip whitespace-nowrap">Github</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/microsoft-azure.png"
-                                alt="microsoft-azure icon">
-                            <span class="tooltip whitespace-nowrap">Azure</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full shadow-md border scroll-reveal md:w-1/2">
-                    <h4 class="bg-slate-900 text-white py-1 text-center font-bold">TOOLS</h4>
-                    <div class="flex flex-wrap justify-center items-center space-x-4 py-4">
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/vscode.png" alt="vscode icon">
-                            <span class="tooltip whitespace-nowrap">VSCode</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/postman.jpg" alt="postman icon">
-                            <span class="tooltip whitespace-nowrap">Postman</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/npm.png" alt="npm icon">
-                            <span class="tooltip whitespace-nowrap">npm</span>
-                        </div>
-                        <div class="tech-icon">
-                            <img class="w-14 md:w-16" src="../../../assets/tech-icon/pip.png" alt="pip icon">
-                            <span class="tooltip whitespace-nowrap">pip</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr *ngIf="isLearnMoreClicked" class="mt-6">
-
-        <!-- Professional Background -->
-        <div id="experience" *ngIf="isLearnMoreClicked" class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto scroll-m-[125px]">
-            <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">Professional Background</h3>
-            <p class="leading-7">
-                Though my formal job experience may seem unrelated, I've developed a set of transferable skills that
-                I am confident will contribute effectively in this new environment.
-            </p>
-            <!-- Flex div -->
-            <div
-                class=" flex flex-col w-full justify-between space-x-0 space-y-6 mt-6 md:flex-row md:space-x-6 md:space-y-0">
-                <!-- Left Item -->
-                <div class="w-full md:w-1/2">
-                    <div class="relative flex w-full text-center">
-                        <figure class="fadein w-full">
-                            <div class="transition-all duration-300 w-full bg-cover bg-center blur" [style.background-image]="'url(' + currentImage.placeholder + ')'"
-                                [ngClass]="{'blur-0': isImageLoaded}">
-                                <img class="w-full aspect-[4/3] opacity-0"
-                                    [ngClass]="{'opacity-100': isImageLoaded}"
-                                    loading="lazy"
-                                    (load)="onImageLoad()"
-                                    [src]="currentImage.src" alt="speaking engagement">
-                            </div>
-                        </figure>
-                        <div
-                            class="absolute flex self-center justify-between items-center w-full px-2 text-2xl text-white">
-                            <button class="prev rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="previousImage()">
-                                <fa-icon
-                                    class="left-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
-                                    [icon]="faChevronLeft">
-                                </fa-icon>
-                            </button>
-                            <button class="next rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]" (click)="nextImage()">
-                                <fa-icon
-                                    class="right-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
-                                    [icon]="faChevronRight">
-                                </fa-icon>
-                            </button>
-                        </div>
-                    </div>
-                    <a [href]="currentImage.reference">
-                        <p class="transition-all duration-500 opacity-0 text-center italic mt-2 text-sm font-semibold"
-                            [ngClass]="{'opacity-100': isImageLoaded}">
-                            {{currentImage.title}}
-                        </p>
-                    </a>
-                </div>
-                <!-- Right Items -->
-                <div class="flex flex-col w-full space-y-4 md:w-1/2">
-                    <p class="leading-7">
-                        In my role at the DTI-Rizal, I organized training sessions and
-                        occasionally served as a speaker for entrepreneurial seminars.
-                        Additionally, I provided assistance to MSME clients, guiding them through the business
-                        registration
-                        and compliance processes.
-                    </p>
-                    <p class="leading-7">
-                        These engagements have honed my verbal communication, presentation, and effective speaking
-                        skills,
-                        allowing me explain complex technical ideas in an easy-to-understand way.
-                        Also, my experience in project management during these roles has equipped me with the ability to
-                        plan, execute, and coordinate tasks efficiently.
-                    </p>
-                    <p class="leading-7">
-                        I am confident that these skills and passion for web development could help me to effectively
-                        communicate value, engage stakeholders, and drive project success in the industry.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <hr *ngIf="isLearnMoreClicked" class="mt-6">
-
-        <!-- Leisure and Lifestyle -->
-        <div *ngIf="isLearnMoreClicked" class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto">
-            <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">Leisure and Lifestyle</h3>
-            <!-- Flex div -->
-            <div
-                class="flex flex-col-reverse w-full justify-between space-x-0 space-y-reverse space-y-6 mt-6 md:flex-row md:space-x-6 md:space-y-0">
-                <!-- Left Items -->
-                <div class="flex flex-col w-full space-y-4 md:w-1/2">
-                    <p class="leading-7">
-                        Guitar playing is something I enjoy. I really like metalcore music, and you might catch me both
-                        listening to and occasionally shredding along 🤘.
-                    </p>
-                    <p>
-                        I also hit the gym from time to time to stay active. 💪
-                    </p>
-                    <p class="leading-7">
-                        I enjoy watching anime and playing 'Call of Duty: Mobile' in my free time.
-                    </p>
-                    <p class="leading-7">
-                        I balance interests, enjoy life fully, and bring passion to web development projects.
-                    </p>
-                </div>
-                <!-- Right Items -->
-                <div class="w-full text-center h-full md:w-1/2">
-                    <div class="wistia_responsive_padding" style="padding:56.67% 0 0 0;position:relative;">
-                        <div class="wistia_responsive_wrapper"
-                            style="height:100%;left:0;position:absolute;top:0;width:100%;">
-                            <div class="wistia_embed wistia_async_jpnvqur43w seo=true videoFoam=true"
-                                style="height:100%;position:relative;width:100%">
-                                <div class="wistia_swatch"
-                                    style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;">
-                                    <img src="https://fast.wistia.com/embed/medias/jpnvqur43w/swatch"
-                                        style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt=""
-                                        aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full mt-1 italic text-sm">
-                        My guitar cover:
-                        <a href="https://www.youtube.com/watch?v=sh7n4TvXt5A" target="_blank" class="font-semibold">
-                            "To Plant A Seed" by We Came As Romans
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Learn More/See Less Buttons -->
-        <button (click)="toggleLearnMore()" [ngClass]="{'mt-4': isLearnMoreClicked}"
-            class="scroll-reveal font-bold text-slate-800 text-lg self-start hover:text-slate-600">
-            {{!isLearnMoreClicked? 'Learn more about me...': 'See less...'}}
-        </button>
+<section
+  id="about"
+  class="w-full mx-auto py-20 px-4 bg-slate-50 scroll-m-[75px]"
+>
+  <div class="flex flex-col w-full max-w-6xl mx-auto">
+    <h2
+      class="scroll-reveal font-extrabold text-3xl text-slate-800 md:text-4xl"
+    >
+      ABOUT ME
+    </h2>
+    <div class="flex flex-col w-full space-y-4 my-6">
+      <p class="scroll-reveal leading-7">
+        Hello there! I'm Daryl Andres, a passionate web developer who
+        transitioned into the field through self-study and dedication. What
+        started as a personal learning journey has now become a full-fledged
+        career, where I continue to grow, refine my skills, and stay up to date
+        with modern web technologies.
+      </p>
+      <p class="scroll-reveal leading-7">
+        Now working as a
+        <strong
+          tabindex="0"
+          class="font-bold text-slate-800 cursor-pointer"
+          (click)="scrollToSection('#current-profession')"
+        >
+          junior web developer </strong
+        >, I have gained hands-on experience in building and maintaining web
+        applications. My
+        <strong
+          tabindex="0"
+          class="font-bold text-slate-800 cursor-pointer"
+          (click)="scrollToSection('#previous-experience')"
+        >
+          previous background
+        </strong>
+        in project management and communication has helped me adapt quickly in
+        collaborative development environments. Combining technical expertise
+        with problem-solving and organizational skills, I thrive in dynamic
+        settings where I can contribute to impactful projects while continuously
+        learning from experienced professionals.
+      </p>
     </div>
 
+    <hr *ngIf="isLearnMoreClicked" class="mt-6" />
+
+    <!-- Current Profession -->
+    <div
+      id="current-profession"
+      *ngIf="isLearnMoreClicked"
+      class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto scroll-m-[125px]"
+    >
+      <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">
+        Current Profession: Junior Web Developer
+      </h3>
+      <p class="leading-7">
+        As a Junior Web Developer, I work on building and maintaining dynamic
+        web applications. My expertise includes Next.js, Vue.js, React, Strapi,
+        and Tailwind CSS, allowing me to develop seamless and responsive user
+        interfaces while integrating with backend APIs.
+      </p>
+      <p class="leading-7">
+        My role involves developing scalable components, optimizing performance,
+        and ensuring a smooth user experience. I thrive in problem-solving
+        scenarios and continuously expand my knowledge in full-stack
+        development.
+      </p>
+      <p class="leading-7">
+        Collaboration is at the heart of my work. I engage with designer,
+        backend developers, and project manager to deliver high-quality digital
+        solutions. Learning never stops, and I stay up to date with the latest
+        industry trends.
+      </p>
+    </div>
+    <hr *ngIf="isLearnMoreClicked" class="mt-6" />
+
+    <!-- Previous Non-Tech Background -->
+    <div
+      id="previous-experience"
+      *ngIf="isLearnMoreClicked"
+      class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto scroll-m-[125px]"
+    >
+      <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">
+        Previous Non-Tech Background
+      </h3>
+      <p class="leading-7">
+        Though my previous job experience before transitioning into tech may
+        seem unrelated, I've developed a set of transferable skills that
+        contribute effectively to my career in web development.
+      </p>
+      <!-- Flex div -->
+      <div
+        class="flex flex-col w-full justify-between space-x-0 space-y-6 mt-6 md:flex-row md:space-x-6 md:space-y-0"
+      >
+        <!-- Left Item -->
+        <div class="w-full md:w-1/2">
+          <div class="relative flex w-full text-center">
+            <figure class="fadein w-full">
+              <div
+                class="transition-all duration-300 w-full bg-cover bg-center blur"
+                [style.background-image]="
+                  'url(' + currentImage.placeholder + ')'
+                "
+                [ngClass]="{ 'blur-0': isImageLoaded }"
+              >
+                <img
+                  class="w-full aspect-[4/3] opacity-0"
+                  [ngClass]="{ 'opacity-100': isImageLoaded }"
+                  loading="lazy"
+                  (load)="onImageLoad()"
+                  [src]="currentImage.src"
+                  alt="speaking engagement"
+                />
+              </div>
+            </figure>
+            <div
+              class="absolute flex self-center justify-between items-center w-full px-2 text-2xl text-slate-50"
+            >
+              <button
+                class="prev rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]"
+                (click)="previousImage()"
+              >
+                <fa-icon
+                  class="left-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
+                  [icon]="faChevronLeft"
+                >
+                </fa-icon>
+              </button>
+              <button
+                class="next rounded px-4 py-2 bg-[rgba(0,0,0,0.5)]"
+                (click)="nextImage()"
+              >
+                <fa-icon
+                  class="right-icon opacity-50 shadow-lg rounded-full leading-none transition-all duration-300"
+                  [icon]="faChevronRight"
+                >
+                </fa-icon>
+              </button>
+            </div>
+          </div>
+          <a [href]="currentImage.reference">
+            <p
+              class="transition-all duration-500 opacity-0 text-center italic mt-2 text-sm font-semibold"
+              [ngClass]="{ 'opacity-100': isImageLoaded }"
+            >
+              {{ currentImage.title }}
+            </p>
+          </a>
+        </div>
+        <!-- Right Items -->
+        <div class="flex flex-col w-full space-y-4 md:w-1/2">
+          <p class="leading-7">
+            In my role at the DTI-Rizal, I organized training sessions and
+            occasionally served as a speaker for entrepreneurial seminars.
+            Additionally, I provided assistance to MSME clients, guiding them
+            through the business registration and compliance processes.
+          </p>
+          <p class="leading-7">
+            These engagements have honed my verbal communication, presentation,
+            and effective speaking skills, allowing me explain complex technical
+            ideas in an easy-to-understand way. Also, my experience in project
+            management during these roles has equipped me with the ability to
+            plan, execute, and coordinate tasks efficiently.
+          </p>
+          <p class="leading-7">
+            I am confident that these skills and passion for web development
+            could help me to effectively communicate value, engage stakeholders,
+            and drive project success in the industry.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <hr *ngIf="isLearnMoreClicked" class="mt-6" />
+
+    <!-- Leisure and Lifestyle -->
+    <div
+      *ngIf="isLearnMoreClicked"
+      class="fadein flex flex-col w-full space-y-4 my-12 max-w-6xl mx-auto"
+    >
+      <h3 class="font-extrabold text-2xl text-slate-800 md:text-3xl">
+        Leisure and Lifestyle
+      </h3>
+      <!-- Flex div -->
+      <div
+        class="flex flex-col-reverse w-full justify-between space-x-0 space-y-reverse space-y-6 mt-6 md:flex-row md:space-x-6 md:space-y-0"
+      >
+        <!-- Left Items -->
+        <div class="flex flex-col w-full space-y-4 md:w-1/2">
+          <p class="leading-7">
+            Guitar playing is something I enjoy. I really like metalcore music,
+            and you might catch me both listening to and occasionally shredding
+            along 🤘.
+          </p>
+          <p>I also hit the gym from time to time to stay active. 💪</p>
+          <p class="leading-7">
+            I enjoy watching anime and playing 'Call of Duty: Mobile' in my free
+            time.
+          </p>
+          <p class="leading-7">
+            I balance interests, enjoy life fully, and bring passion to web
+            development projects.
+          </p>
+        </div>
+        <!-- Right Items -->
+        <div class="w-full text-center h-full md:w-1/2">
+          <div
+            class="wistia_responsive_padding"
+            style="padding: 56.67% 0 0 0; position: relative"
+          >
+            <div
+              class="wistia_responsive_wrapper"
+              style="
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+              "
+            >
+              <div
+                class="wistia_embed wistia_async_jpnvqur43w seo=true videoFoam=true"
+                style="height: 100%; position: relative; width: 100%"
+              >
+                <div
+                  class="wistia_swatch"
+                  style="
+                    height: 100%;
+                    left: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    position: absolute;
+                    top: 0;
+                    transition: opacity 200ms;
+                    width: 100%;
+                  "
+                >
+                  <img
+                    src="https://fast.wistia.com/embed/medias/jpnvqur43w/swatch"
+                    style="
+                      filter: blur(5px);
+                      height: 100%;
+                      object-fit: contain;
+                      width: 100%;
+                    "
+                    alt=""
+                    aria-hidden="true"
+                    onload="this.parentNode.style.opacity=1;"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full mt-1 italic text-sm">
+            My guitar cover:
+            <a
+              href="https://www.youtube.com/watch?v=sh7n4TvXt5A"
+              target="_blank"
+              class="font-semibold"
+            >
+              "To Plant A Seed" by We Came As Romans
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- See More/Less Button -->
+    <button
+      (click)="toggleLearnMore()"
+      class="scroll-reveal font-semibold text-slate-800 self-start hover:text-slate-600"
+    >
+      {{ !isLearnMoreClicked ? "Learn more about me..." : "See less..." }}
+    </button>
+    <hr class="mt-6" />
+  </div>
+
+  <!-- Technologies I've Worked With -->
+  <about-technologies />
 </section>
