@@ -3,14 +3,14 @@ import {
   HostListener,
   AfterViewInit,
   ChangeDetectorRef,
-  Inject,
   PLATFORM_ID,
   computed,
   signal,
   inject,
   ElementRef,
+  ViewChild,
 } from '@angular/core';
-import { isPlatformBrowser, NgClass, ViewportScroller } from '@angular/common';
+import { isPlatformBrowser, NgClass } from '@angular/common';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import navlinkData from '@data/nav-link.data';
@@ -35,12 +35,21 @@ import { letterD } from '@icon/brand.icon';
       }
 
       .active {
-        border-bottom: 3px solid #22d3ee;
+        border-left: 4px solid #22d3ee;
+
+        @media (min-width: 768px) {
+          border-bottom: 3px solid #22d3ee;
+          border-left: none;
+        }
       }
     `,
   ],
 })
 export class HeaderComponent implements AfterViewInit {
+  private platformId = inject(PLATFORM_ID);
+  private cdr = inject(ChangeDetectorRef);
+  private elementRef = inject(ElementRef);
+
   faBars = faBars;
   faTimes = faTimes;
   letterD = letterD;
@@ -60,35 +69,28 @@ export class HeaderComponent implements AfterViewInit {
   indicatorWidth = signal<number>(0);
   indicatorPosition = signal<number>(0);
 
-  elementRef = inject(ElementRef);
-  viewportScroller = inject(ViewportScroller);
-
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    this.isNavBarOpen.set(false);
+    if (isPlatformBrowser(this.platformId)) {
+      this.isNavBarOpen.set(false);
+      this.isScrolled.set(window.scrollY > 0);
 
-    this.isScrolled.set(window.scrollY > 0);
+      const sections = this.links().map((link) => link.section);
 
-    const sections = this.links().map((link) => link.section);
-
-    for (const section of sections) {
-      const element = document.getElementById(section as string);
-      if (element) {
-        const rect = element.getBoundingClientRect();
-        const offset = 100; // 100px offset
-        if (rect.top <= offset && rect.bottom >= offset) {
-          this.activeSection.set(section as string);
-          this.updateIndicator();
-          break;
+      for (const section of sections) {
+        const element = document.getElementById(section as string);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const offset = 100; // 100px offset
+          if (rect.top <= offset && rect.bottom >= offset) {
+            this.activeSection.set(section as string);
+            this.updateIndicator();
+            break;
+          }
         }
       }
     }
   }
-
-  constructor(
-    @Inject(PLATFORM_ID) private platformId: object,
-    private cdr: ChangeDetectorRef
-  ) {}
 
   ngOnInit() {
     this.updateIndicator();
@@ -106,7 +108,7 @@ export class HeaderComponent implements AfterViewInit {
   scrollTo(target: string): void {
     this.isNavBarOpen.set(false);
 
-    const elem = document.querySelector(target);
+    const elem = this.elementRef.nativeElement.querySelector(target);
     if (elem) {
       elem.scrollIntoView({ behavior: 'smooth' });
       this.currentSection = target;

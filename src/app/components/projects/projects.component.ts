@@ -1,15 +1,20 @@
 import {
   Component,
-  type AfterViewInit,
+  AfterViewInit,
   ViewChildren,
-  type QueryList,
+  QueryList,
   ElementRef,
+  PLATFORM_ID,
+  inject,
+  ViewChild,
+  Renderer2,
 } from '@angular/core';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { projectsData } from '@data/personal-projects.data';
 import { NgClass } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
@@ -19,18 +24,23 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements AfterViewInit {
+  private platformId = inject(PLATFORM_ID);
+  private renderer = inject(Renderer2);
+
+  @ViewChild('projectSection') projectSection!: ElementRef;
   @ViewChildren('projectImage') projectImages!: QueryList<ElementRef>;
 
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faGithub = faGithub;
-
   projects = projectsData;
   isImageLoaded = false;
 
   ngAfterViewInit() {
-    this.projectImages.forEach((imgRef) => {
-      this.magnify(imgRef.nativeElement, 1.5);
-    });
+    if (isPlatformBrowser(this.platformId)) {
+      this.projectImages.forEach((imgRef) => {
+        this.magnify(imgRef.nativeElement, 1.5);
+      });
+    }
   }
 
   onImageLoad() {
@@ -38,8 +48,10 @@ export class ProjectsComponent implements AfterViewInit {
   }
 
   private magnify(imgElement: HTMLImageElement, zoom: number) {
-    const glass = document.createElement('div');
-    glass.setAttribute('class', 'img-magnifier-glass');
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    const glass = this.renderer.createElement('div');
+    this.renderer.addClass(glass, 'img-magnifier-glass');
 
     imgElement.parentElement?.insertBefore(glass, imgElement);
 
@@ -53,12 +65,12 @@ export class ProjectsComponent implements AfterViewInit {
     const h = glass.offsetHeight / 2;
 
     imgElement.addEventListener('mouseenter', (e) => {
-      glass.style.display = 'block';
+      this.renderer.addClass(glass, 'md:!block');
       moveMagnifier(e);
     });
 
     imgElement.addEventListener('mouseleave', () => {
-      glass.style.display = 'none';
+      this.renderer.removeClass(glass, 'md:!block');
     });
 
     glass.addEventListener('mousemove', moveMagnifier);
