@@ -16,12 +16,12 @@ import { Icon } from '@shared/components/icon/icon';
   imports: [FontAwesomeModule, Icon],
   template: `
     <div
-      class="flex flex-col justify-center items-center bg-slate-950 w-full text-slate-50 py-12"
+      class="flex flex-col justify-center items-center bg-slate-900/75 w-full text-slate-200 py-12"
     >
       <ul class="flex justify-center items-center space-x-4 mb-4">
         @for (socialLink of socialLinks(); track $index) {
         <li
-          class="rounded-md px-2 py-1 bg-slate-900 transition-all duration-300 hover:scale-[1.1]"
+          class="rounded-md px-2 py-1 bg-slate-800 transition-all duration-300 hover:scale-[1.1]"
         >
           <a [href]="socialLink.link" target="_blank">
             <icon

@@ -12,7 +12,8 @@ export const projectsData: Project[] = [
     },
     image: {
       src: '../../../assets/img/descriptor.png',
-      alt: 'descriptorsearch sample photo',
+      alt: 'DescriptorSearch sample photo',
+      placeholder: '../../../assets/img/placeholder/descriptor.png',
     },
   },
   {
@@ -27,6 +28,7 @@ export const projectsData: Project[] = [
     image: {
       src: '../../../assets/img/rylflix.png',
       alt: 'RylFlix sample photo',
+      placeholder: '../../../assets/img/placeholder/rylflix.png',
     },
   },
   {
@@ -41,6 +43,7 @@ export const projectsData: Project[] = [
     image: {
       src: '../../../assets/img/citycon.png',
       alt: 'citycon sample photo',
+      placeholder: '../../../assets/img/placeholder/citycon.png',
     },
   },
   {
@@ -60,6 +63,7 @@ export const projectsData: Project[] = [
     image: {
       src: '../../../assets/img/invenia.png',
       alt: 'invenia sample photo',
+      placeholder: '../../../assets/img/placeholder/invenia.png',
     },
   },
   {
@@ -74,6 +78,7 @@ export const projectsData: Project[] = [
     image: {
       src: '../../../assets/img/qrlink.png',
       alt: 'qrlink sample photo',
+      placeholder: '../../../assets/img/placeholder/qrlink.png',
     },
   },
   {
@@ -92,6 +97,7 @@ export const projectsData: Project[] = [
     image: {
       src: '../../../assets/img/ncantipolo.png',
       alt: 'nc antipolo portal sample photo',
+      placeholder: '../../../assets/img/placeholder/ncantipolo.png',
     },
   },
 ];

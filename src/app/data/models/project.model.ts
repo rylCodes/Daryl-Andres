@@ -13,5 +13,6 @@ export interface Project {
   image: {
     src: string;
     alt: string;
+    placeholder: string;
   };
 }
