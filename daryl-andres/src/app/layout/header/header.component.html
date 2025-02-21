@@ -54,18 +54,22 @@
         </nav>
       </div>
     </div>
-    <!-- Navigation Bar for Smaller Screens -->
+    <!-- Mobile Navigation Bar -->
     <nav class="relative w-full block md:hidden">
       <ul
         #mobileMenu
         [ngClass]="isNavBarOpen() ? 'translate-x-0' : 'translate-x-full'"
-        class="absolute w-full top-full left-0 flex flex-col transition-transform duration-300 space-y-2 slide-back bg-slate-50 border-b text-slate-900 md:hidden"
+        class="absolute w-full top-full left-0 flex flex-col transition-transform duration-300 slide-back bg-slate-50 border-b text-slate-900 md:hidden"
       >
         @for (link of links(); track $index) {
         <li
           class="transition-all duration-300 cursor-pointer hover:bg-gradient-to-r hover:from-black hover:to-slate-700 hover:text-slate-50"
         >
-          <a [href]="link.path" class="px-2 py-4 block">
+          <a
+            [href]="link.path"
+            class="p-4 block"
+            [class.active]="activeSection() === link.section"
+          >
             {{ link.name }}
           </a>
         </li>

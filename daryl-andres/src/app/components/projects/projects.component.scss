@@ -63,6 +63,7 @@ h2 {
 }
 
 ::ng-deep .img-magnifier-glass {
+  display: none;
   position: absolute;
   border: 1px solid #374151;
   border-radius: 50%;
