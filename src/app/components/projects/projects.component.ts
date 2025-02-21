@@ -8,6 +8,8 @@ import {
   inject,
   ViewChild,
   Renderer2,
+  computed,
+  signal,
 } from '@angular/core';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -32,8 +34,8 @@ export class ProjectsComponent implements AfterViewInit {
 
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faGithub = faGithub;
-  projects = projectsData;
-  isImageLoaded = false;
+  projects = computed(() => projectsData);
+  isImageLoaded = signal(false);
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
@@ -44,7 +46,7 @@ export class ProjectsComponent implements AfterViewInit {
   }
 
   onImageLoad() {
-    this.isImageLoaded = true;
+    this.isImageLoaded.set(true);
   }
 
   private magnify(imgElement: HTMLImageElement, zoom: number) {

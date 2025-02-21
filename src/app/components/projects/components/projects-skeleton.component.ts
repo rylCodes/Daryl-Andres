@@ -5,7 +5,9 @@ import { Component } from '@angular/core';
   selector: 'app-projects-skeleton',
   standalone: true,
   template: `
-    <section class="w-full mx-auto bg-slate-900 py-20 text-slate-50">
+    <section
+      class="w-full mx-auto bg-gradient-to-br from-slate-950 to-slate-600 py-20 text-slate-50"
+    >
       <div class="w-full max-w-7xl px-4 mx-auto">
         <!-- Title skeleton -->
         <div
@@ -14,7 +16,7 @@ import { Component } from '@angular/core';
 
         <!-- Projects grid skeleton -->
         <div class="grid gap-12">
-          @for(item of [1, 2]; track item) {
+          @for(item of [1, 2, 3]; track item) {
           <div
             class="sub-section bg-slate-800 rounded-xl overflow-hidden shadow-lg"
           >
