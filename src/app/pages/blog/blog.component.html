@@ -1,0 +1,70 @@
+<div class="w-full mx-auto py-8 text-slate-50">
+  <div class="w-full max-w-7xl px-4 mx-auto">
+    <nav class="mb-8">
+      <a
+        routerLink="/"
+        class="text-cyan-400 hover:text-cyan-300 flex items-center"
+      >
+        <fa-icon [icon]="faHome" class="mr-2"></fa-icon>
+        Back to Portfolio
+      </a>
+    </nav>
+
+    <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 md:mb-0">Blog.</h1>
+      <h4 class="text-center md:text-right max-w-md">
+        <p>
+          Sharing my thoughts, experiences, and insights on
+          <span class="text-cyan-400">web development</span>,
+          <span class="text-green-400">technology trends</span>, and
+          <span class="text-yellow-400">personal growth</span> in the tech
+          industry.
+        </p>
+      </h4>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div
+        *ngFor="let post of posts"
+        class="bg-slate-800 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105"
+      >
+        <div class="relative h-48">
+          <img
+            [src]="imageUrl(post.coverImage)"
+            [alt]="post.title"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="absolute top-0 left-0 right-0 flex justify-between items-start p-4"
+          >
+            <span
+              class="bg-slate-900 text-slate-100 text-xs font-semibold px-2 py-1 rounded"
+              >{{ post.category }}</span
+            >
+            <div
+              class="bg-slate-900 text-slate-100 text-xs font-semibold px-2 py-1 rounded"
+            >
+              {{ post.date | date: "d MMM" }}
+            </div>
+          </div>
+        </div>
+        <div class="p-4">
+          <h2 class="font-bold text-xl mb-2">{{ post.title }}</h2>
+          <p class="text-slate-300 text-sm mb-4">{{ post.excerpt }}</p>
+          <div class="flex justify-between items-center">
+            <span class="text-sm text-slate-400"
+              >By: {{ post.author.name }}</span
+            >
+            <a
+              [routerLink]="['/blog', post.slug]"
+              class="inline-flex items-center text-cyan-400 hover:text-cyan-300"
+            >
+              Read more
+              <fa-icon [icon]="faArrowUpRightFromSquare" class="ml-1"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -24,6 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "allowedCommonJsDependencies": ["@sanity/client"],
             "outputPath": "dist/daryl-andres",
             "index": "src/index.html",
             "browser": "src/main.ts",
