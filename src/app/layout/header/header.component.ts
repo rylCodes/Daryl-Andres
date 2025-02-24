@@ -8,7 +8,6 @@ import {
   signal,
   inject,
   ElementRef,
-  ViewChild,
 } from '@angular/core';
 import { isPlatformBrowser, NgClass } from '@angular/common';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -16,11 +15,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import navlinkData from '@data/nav-link.data';
 import { Icon } from '@shared/components/icon/icon';
 import { letterD } from '@icon/brand.icon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [NgClass, FontAwesomeModule, Icon],
+  imports: [NgClass, FontAwesomeModule, Icon, RouterLink],
   templateUrl: './header.component.html',
   styles: [
     `
@@ -58,7 +58,7 @@ export class HeaderComponent implements AfterViewInit {
   iconColor = computed(() =>
     !this.isNavBarOpen() && !this.isScrolled()
       ? 'fill-slate-50 dark:fill-slate-950'
-      : 'fill-slate-950 dark:fill-slate-50'
+      : 'fill-slate-950 dark:fill-slate-50',
   );
 
   isScrolled = signal<boolean>(false);
