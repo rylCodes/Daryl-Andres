@@ -5,35 +5,71 @@ import { SanityService } from '@services/sanity/sanity.service';
 import {
   faArrowUpRightFromSquare,
   faHome,
+  faFilter,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [CommonModule, RouterLink, FontAwesomeModule],
+  imports: [CommonModule, RouterLink, FontAwesomeModule, FormsModule],
   templateUrl: './blog.component.html',
 })
 export class BlogComponent implements OnInit {
   sanityService = inject(SanityService);
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faHome = faHome;
+  faFilter = faFilter;
   posts: any[] = [];
+  allPosts: any[] = [];
+  categories: string[] = [];
+  selectedCategory: string = 'All';
+  isLoading: boolean = true;
 
-  defaultImageURL =
-    'https://cdn.sanity.io/images//production/f2618421dbd6de2a63ddea363195fbab8f41afc5-3543x2365.jpg';
+  placeholderImage = '../../../../assets/placeholder-image.svg';
 
   imageUrl(source: any) {
-    return source ? this.sanityService.urlFor(source) : this.defaultImageURL;
+    return source ? this.sanityService.urlFor(source) : this.placeholderImage;
+  }
+
+  handleImageLoad(event: any) {
+    event.target.classList.remove('image-loading');
+  }
+
+  handleImageError(event: any) {
+    event.target.src = this.placeholderImage;
   }
 
   ngOnInit(): void {
     this.getPosts();
   }
 
-  async getPosts(): Promise<any[]> {
-    this.posts = await this.sanityService.getAllPosts();
-    console.log(this.posts);
-    return this.posts;
+  async getPosts(): Promise<void> {
+    try {
+      this.isLoading = true;
+      this.allPosts = await this.sanityService.getAllPosts();
+      this.posts = this.allPosts;
+      this.extractCategories();
+      console.log(this.posts);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.isLoading = false;
+    }
+  }
+
+  extractCategories(): void {
+    const categoriesSet = new Set(this.allPosts.map((post) => post.category));
+    this.categories = ['All', ...Array.from(categoriesSet)];
+  }
+
+  filterPosts(category: string): void {
+    this.selectedCategory = category;
+    if (category === 'All') {
+      this.posts = this.allPosts;
+    } else {
+      this.posts = this.allPosts.filter((post) => post.category === category);
+    }
   }
 }

@@ -21,7 +21,12 @@ export class SanityService {
   urlFor = (source: any) =>
     imageUrlBuilder(this.sanityClientCredentials.option).image(source);
 
-  async getAllPosts(): Promise<Post[]> {
+  async getAllPosts(category?: string): Promise<Post[]> {
+    // let query = indexQuery;
+    // if (category && category !== 'All') {
+    //   query = `${indexQuery} [category == "${category}"]`;
+    // }
+    // return await this.sanityClientCredentials.option.fetch(query);
     return await this.sanityClientCredentials.option.fetch(indexQuery);
   }
 
