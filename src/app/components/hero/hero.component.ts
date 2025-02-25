@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
       class="relative w-full mx-auto min-h-svh max-h-[59rem] flex items-center justify-center sm:h-svh sm:min-h-max"
     >
       <div
-        class="container max-w-7xl mx-auto px-4 py-[6.25rem] flex flex-col justify-between items-center gap-12 w-full h-full md:flex-row md:py-20"
+        class="container max-w-7xl mx-auto px-4 py-[6.25rem] flex flex-col justify-between items-center gap-6 w-full h-full md:flex-row md:py-20 md:gap-12"
       >
         <!-- Left Content -->
         <div class="w-full mt-6 md:w-1/2 text-slate-50 sm:mt-0">
@@ -27,12 +28,23 @@ import { Component, OnInit } from '@angular/core';
             A self-taught
             <span class="font-bold text-cyan-400">Web Developer</span>
           </p>
-          <a
-            class="hover:bg-slate-50 hover:text-slate-900 transition-all duration-500 block fade-in opacity-0 py-4 px-12 rounded-lg font-semibold border-2 border-white w-full text-center mt-6 md:w-fit"
-            href="#contact"
+          <div
+            class="flex flex-col gap-2 mt-6 fade-in opacity-0 sm:gap-4 sm:flex-row"
           >
-            CONTACT ME
-          </a>
+            <a
+              class="bg-slate-50 text-slate-900 hover:scale-105 transition-all duration-500 block py-4 px-6 rounded-lg font-semibold border-2 border-white w-full text-center text-nowrap lg:px-12 md:w-fit"
+              href="#contact"
+            >
+              CONTACT ME
+            </a>
+            <button
+              class="hover:scale-105 transition-all duration-500 block py-4 px-6 rounded-lg font-semibold border-2 border-white w-full text-center text-nowrap lg:px-12 md:w-fit"
+              href="#resume"
+              (click)="navigateToResumeAndOpenCV()"
+            >
+              DOWNLOAD CV
+            </button>
+          </div>
         </div>
         <!-- Right Content (Image) -->
         <div class="w-full md:w-1/2">
@@ -54,8 +66,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   isImageLoaded: boolean = false;
+  private platformId = inject(PLATFORM_ID);
 
   ngOnInit() {}
+
+  navigateToResumeAndOpenCV(): void {
+    const hash = window.location.hash;
+
+    if (isPlatformBrowser(this.platformId)) {
+      window.location.hash = '#resume';
+
+      if (hash === '#resume') {
+        window.open('../../../assets/daryl-andres-cv.pdf', '_blank');
+      } else {
+        setTimeout(() => {
+          window.open('../../../assets/daryl-andres-cv.pdf', '_blank');
+        }, 1500);
+      }
+    }
+  }
 
   onImageLoad() {
     this.isImageLoaded = true;

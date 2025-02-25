@@ -20,11 +20,11 @@ const navlinkData: NavLinkSchema[] = [
     path: '#projects',
     section: 'projects',
   },
-  {
-    name: 'Resume',
-    path: '#resume',
-    section: 'resume',
-  },
+  // {
+  //   name: 'Resume',
+  //   path: '#resume',
+  //   section: 'resume',
+  // },
   {
     name: 'Contact',
     path: '#contact',
