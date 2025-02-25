@@ -2,50 +2,133 @@
   <div class="w-full max-w-5xl px-4 mx-auto mt-8">
     <nav class="mb-8 flex justify-between items-center">
       <a
-        routerLink="/"
-        class="text-cyan-400 hover:text-cyan-300 flex items-center"
-      >
-        <fa-icon [icon]="faHome" class="mr-2"></fa-icon>
-        Back to Portfolio
-      </a>
-      <a
         routerLink="/blog"
         class="text-cyan-400 hover:text-cyan-300 flex items-center"
       >
         <fa-icon [icon]="faArrowLeft" class="mr-2"></fa-icon>
         Back to Articles
       </a>
+      <a
+        routerLink="/"
+        class="text-cyan-400 hover:text-cyan-300 flex items-center"
+      >
+        <fa-icon [icon]="faHome" class="mr-2"></fa-icon>
+        Back to Portfolio
+      </a>
     </nav>
 
-    <div class="mb-12">
-      <img
-        [src]="imageUrl(postData?.coverImage)"
-        [alt]="postData?.title"
-        class="w-full h-64 object-cover rounded-xl shadow-lg"
-      />
-    </div>
-
-    <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ postData?.title }}</h1>
-
-    <div class="flex items-center mb-8">
-      <img
-        [src]="imageUrl(postData?.author.picture)"
-        [alt]="postData?.author.name"
-        class="w-12 h-12 rounded-full mr-4"
-      />
-      <div>
-        <p class="font-semibold">{{ postData?.author.name }}</p>
-        <p class="text-sm text-slate-300">
-          {{ postData?.date | date: "mediumDate" }}
-        </p>
+    @if (isLoading) {
+      <div class="mb-12">
+        <div
+          class="w-full h-64 bg-slate-700 rounded-xl animate-pulse md:h-80"
+        ></div>
       </div>
+      <div class="h-10 bg-slate-700 w-3/4 rounded mb-6 animate-pulse"></div>
+      <div class="flex items-center mb-8">
+        <div
+          class="w-12 h-12 rounded-full bg-slate-700 mr-4 animate-pulse"
+        ></div>
+        <div>
+          <div class="h-5 bg-slate-700 w-32 rounded mb-2 animate-pulse"></div>
+          <div class="h-4 bg-slate-700 w-24 rounded animate-pulse"></div>
+        </div>
+      </div>
+      <div class="space-y-4 mb-8">
+        <div class="h-4 bg-slate-700 rounded w-full animate-pulse"></div>
+        <div class="h-4 bg-slate-700 rounded w-5/6 animate-pulse"></div>
+        <div class="h-4 bg-slate-700 rounded w-4/5 animate-pulse"></div>
+      </div>
+      <div class="space-y-4">
+        <div class="h-4 bg-slate-700 rounded w-full animate-pulse"></div>
+        <div class="h-4 bg-slate-700 rounded w-5/6 animate-pulse"></div>
+        <div class="h-4 bg-slate-700 rounded w-4/5 animate-pulse"></div>
+      </div>
+    } @else {
+      <div class="mb-12">
+        <img
+          [src]="imageUrl(postData?.coverImage)"
+          [alt]="postData?.title"
+          class="w-full h-64 object-cover rounded-xl shadow-lg image-loading md:h-80"
+          (load)="handleImageLoad($event)"
+          (error)="handleImageError($event)"
+        />
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">{{ postData?.title }}</h1>
+
+      <div class="flex items-center mb-8">
+        <img
+          [src]="imageUrl(postData?.author.picture)"
+          [alt]="postData?.author.name"
+          class="w-12 h-12 rounded-full mr-4 image-loading"
+          (load)="handleImageLoad($event)"
+          (error)="handleImageError($event)"
+        />
+        <div>
+          <p class="font-semibold">{{ postData?.author.name }}</p>
+          <p class="text-sm text-slate-300">
+            {{ postData?.date | date: "mediumDate" }}
+          </p>
+        </div>
+      </div>
+
+      <div class="prose prose-lg prose-invert max-w-none text-base">
+        <div [innerHTML]="postDataContent"></div>
+      </div>
+    }
+
+    <hr class="border-t border-slate-700 my-12" />
+
+    <div class="mt-16">
+      @if (!isLoading && similarPosts.length > 0) {
+        <h2 class="text-2xl font-bold mb-6">Similar Articles</h2>
+      }
+      @if (isLoading) {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          @for (item of [1, 2, 3]; track item) {
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg">
+              <div class="h-40 bg-slate-700 animate-pulse"></div>
+              <div class="p-4">
+                <div
+                  class="h-5 bg-slate-700 rounded w-3/4 mb-2 animate-pulse"
+                ></div>
+                <div
+                  class="h-4 bg-slate-700 rounded w-full animate-pulse"
+                ></div>
+              </div>
+            </div>
+          }
+        </div>
+      } @else {
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          @for (post of similarPosts; track post._id) {
+            <div class="bg-slate-800 rounded-xl overflow-hidden shadow-lg">
+              <img
+                [src]="imageUrl(post.coverImage)"
+                [alt]="post.title"
+                class="w-full h-40 object-cover transition-transform duration-300 hover:scale-110"
+              />
+              <div class="p-4">
+                <h3 class="font-bold text-lg mb-2">
+                  <a
+                    [routerLink]="['/blog', post.slug]"
+                    class="hover:underline"
+                    >{{ post.title }}</a
+                  >
+                </h3>
+                <a
+                  [routerLink]="['/blog', post.slug]"
+                  class="text-cyan-400 hover:text-cyan-300"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          }
+        </div>
+      }
     </div>
 
-    <div class="prose prose-lg prose-invert max-w-none">
-      <div [innerHTML]="postDataContent"></div>
-    </div>
-
-    <div class="mb-8">
+    <div class="my-12">
       <a
         [routerLink]="['/blog']"
         class="inline-flex items-center text-cyan-400 hover:text-cyan-300"

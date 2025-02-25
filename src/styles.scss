@@ -4,10 +4,25 @@
 @tailwind utilities;
 
 :root {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    position: relative;
-    overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.image-loading {
+  background: linear-gradient(90deg, #2c3e50 25%, #34495e 50%, #2c3e50 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
