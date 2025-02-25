@@ -1,0 +1,14 @@
+{
+  "routes": [
+    {
+      "route": "/blog/{*slug}",
+      "serve": "/index.html",
+      "statusCode": 200
+    },
+    {
+      "route": "/{*rest}",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ]
+}
