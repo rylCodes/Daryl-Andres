@@ -2,7 +2,7 @@ export const environment = {
   production: false,
   mainColor: '#06b6d4',
   url: 'https://localhost:4200',
-  apiUrl: 'https://daryl-django-api.azurewebsites.net',
+  apiUrl: 'http://localhost:8000',
   recaptchaSiteKey: '6LfA8FwpAAAAAJQMFUAdYkbMuegK6bC55IjkVsK7',
   SANITY_PROJECT_ID: 's03qwo1e',
   SANITY_DATASET: 'true',

@@ -13,31 +13,38 @@ import {
 } from '@angular/core';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { projectsData } from '@data/personal-projects.data';
 import { NgClass } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { isPlatformBrowser } from '@angular/common';
+import { ProjectsService } from './projects.service';
+import { Project } from '@data/models/project.model';
+import { ProjectsSkeletonComponent } from './components/projects-skeleton.component';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgClass, FontAwesomeModule],
+  imports: [NgClass, FontAwesomeModule, ProjectsSkeletonComponent],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent implements AfterViewInit {
   private platformId = inject(PLATFORM_ID);
   private renderer = inject(Renderer2);
+  private projectsService = inject(ProjectsService);
 
   @ViewChild('projectSection') projectSection!: ElementRef;
   @ViewChildren('projectImage') projectImages!: QueryList<ElementRef>;
 
   faArrowUpRightFromSquare = faArrowUpRightFromSquare;
   faGithub = faGithub;
-  projects = computed(() => projectsData);
+  projects = signal<Project[]>([]);
   isImageLoaded = signal(false);
-
+  isLoading = computed(() => this.projectsService.isLoading());
   ngAfterViewInit() {
+    this.projectsService.getProjects().subscribe((projects) => {
+      this.projects.set(projects);
+    });
+
     if (isPlatformBrowser(this.platformId)) {
       this.projectImages.forEach((imgRef) => {
         this.magnify(imgRef.nativeElement, 1.5);
