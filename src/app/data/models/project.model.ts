@@ -15,4 +15,6 @@ export interface Project {
     alt: string;
     placeholder: string;
   };
+  image_src?: string;
+  image_placeholder?: string;
 }
