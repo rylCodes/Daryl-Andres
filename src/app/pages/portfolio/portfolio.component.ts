@@ -20,7 +20,6 @@ import { ResumeSkeletonComponent } from '@components/resume/components/resume-sk
     ContactComponent,
     ResumeComponent,
     ProjectsComponent,
-    ProjectsSkeletonComponent,
     ResumeSkeletonComponent,
   ],
   template: `
@@ -29,12 +28,8 @@ import { ResumeSkeletonComponent } from '@components/resume/components/resume-sk
 
       <app-hero></app-hero>
       <app-about></app-about>
+      <app-projects></app-projects>
 
-      @defer {
-        <app-projects></app-projects>
-      } @placeholder {
-        <app-projects-skeleton></app-projects-skeleton>
-      }
       @defer {
         <app-resume></app-resume>
       } @placeholder {

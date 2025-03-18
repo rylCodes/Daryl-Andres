@@ -1,16 +1,16 @@
-@if (isLoading()) {
-  <app-projects-skeleton></app-projects-skeleton>
-} @else {
-  <section
-    #projectSection
-    id="projects"
-    class="w-full mx-auto bg-gradient-to-br from-slate-950 to-slate-600 py-20 text-slate-50 scroll-m-[75px]"
-  >
-    <div class="w-full max-w-7xl px-4 mx-auto">
-      <h2 class="w-full font-extrabold text-3xl md:text-4xl text-center mb-12">
-        Personal Projects
-      </h2>
+<section
+  #projectSection
+  id="projects"
+  class="w-full mx-auto bg-gradient-to-br from-slate-950 to-slate-600 py-20 text-slate-50 scroll-m-[75px]"
+>
+  <div class="w-full max-w-7xl px-4 mx-auto">
+    <h2 class="w-full font-extrabold text-3xl md:text-4xl text-center mb-12">
+      Personal Projects
+    </h2>
 
+    @if (isLoading()) {
+      <app-projects-skeleton></app-projects-skeleton>
+    } @else {
       <div class="grid gap-12">
         @for (project of projects(); track project.title) {
           <div
@@ -77,6 +77,6 @@
           </div>
         }
       </div>
-    </div>
-  </section>
-}
+    }
+  </div>
+</section>
