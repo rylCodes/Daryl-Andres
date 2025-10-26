@@ -1,0 +1,160 @@
+{
+  "journey": [
+    {
+      "icon": "Briefcase",
+      "title": "From Business Counselor to Builder",
+      "description": "Worked at DTI-Rizal assisting MSMEs in registration, compliance, and entrepreneurial seminars — honing communication, presentation, and project management skills."
+    },
+    {
+      "icon": "Users",
+      "title": "Adapting to Tech",
+      "description": "Transitioned into web development through self-study and hands-on learning. My background in communication and management became a foundation for collaboration and problem-solving."
+    },
+    {
+      "icon": "Code",
+      "title": "Becoming a Developer",
+      "description": "Now working as a Junior Web Developer, building and maintaining applications using Next.js, Vue.js, React, Strapi, and Tailwind CSS — focusing on clean, responsive, and scalable systems."
+    },
+    {
+      "icon": "Heart",
+      "title": "Balanced by Passion",
+      "description": "Outside of coding, I enjoy playing guitar, listening to metalcore, hitting the gym, and watching anime — keeping creativity and energy alive in everything I do."
+    }
+  ],
+
+  "currentTechStack": [
+    { "name": "React", "icon": "react", "url": "https://react.dev/" },
+    { "name": "Next.js", "icon": "nextjs", "url": "https://nextjs.org/" },
+    {
+      "name": "TypeScript",
+      "icon": "typescript",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "Tailwind CSS",
+      "icon": "tailwind",
+      "url": "https://tailwindcss.com/"
+    },
+    { "name": "PHP", "icon": "php", "url": "https://www.php.net/" },
+    { "name": "Symfony", "icon": "symfony", "url": "https://symfony.com/" },
+    { "name": "MySQL", "icon": "mysql", "url": "https://www.mysql.com/" },
+    { "name": "Strapi", "icon": "strapi", "url": "https://strapi.io/" }
+  ],
+
+  "techCategories": [
+    {
+      "category": "Frontend",
+      "icon": "Code2",
+      "color": "text-primary",
+      "technologies": [
+        { "name": "React", "level": 90 },
+        { "name": "Next.js", "level": 85 },
+        { "name": "JavaScript", "level": 85 },
+        { "name": "TypeScript", "level": 80 },
+        { "name": "Vue.js", "level": 75 },
+        { "name": "Tailwind CSS", "level": 90 }
+      ]
+    },
+    {
+      "category": "Backend",
+      "icon": "Database",
+      "color": "text-primary",
+      "technologies": [
+        { "name": "PHP", "level": 90 },
+        { "name": "Symfony", "level": 85 },
+        { "name": "Strapi", "level": 80 },
+        { "name": "Node.js", "level": 80 },
+        { "name": "Python", "level": 75 },
+        { "name": "FastAPI", "level": 70 },
+        { "name": "REST APIs", "level": 90 }
+      ]
+    },
+    {
+      "category": "Database",
+      "icon": "Cloud",
+      "color": "text-primary",
+      "technologies": [
+        { "name": "MySQL", "level": 85 },
+        { "name": "PostgreSQL", "level": 80 },
+        { "name": "SQLite", "level": 75 }
+      ]
+    },
+    {
+      "category": "DevOps & Tools",
+      "icon": "Wrench",
+      "color": "text-primary",
+      "technologies": [
+        { "name": "Git", "level": 90 },
+        { "name": "Vercel", "level": 85 },
+        { "name": "Docker", "level": 75 },
+        { "name": "Laragon", "level": 80 },
+        { "name": "Postman", "level": 80 }
+      ]
+    },
+    {
+      "category": "Security & Auth",
+      "icon": "Shield",
+      "color": "text-primary",
+      "technologies": [
+        { "name": "JWT", "level": 85 },
+        { "name": "OAuth 2.0", "level": 80 },
+        { "name": "HTTPS / SSL", "level": 85 },
+        { "name": "CORS", "level": 80 }
+      ]
+    }
+  ],
+
+  "experiences": [
+    {
+      "type": "work",
+      "title": "Junior Web Developer",
+      "company": "Chanz IT Business Solutions Inc.",
+      "period": "May 2024 – Present",
+      "description": "Contributed to full-stack development for a Next.js + Strapi web app and Pimcore PIMS project.",
+      "achievements": [
+        "Developed and maintained features in a course-based web platform",
+        "Implemented reusable UI components and fixed layout issues",
+        "Extended Strapi content-types and customized API endpoints",
+        "Contributed minor updates to a React Native (Expo) app for iOS/Android",
+        "Built Symfony controllers and event listeners for backend logic",
+        "Configured DataObjects and admin interfaces in Pimcore",
+        "Automated imports and data synchronization between systems"
+      ]
+    },
+    {
+      "type": "work",
+      "title": "Business Counsellor",
+      "company": "Department of Trade and Industry – Rizal",
+      "period": "March 2021 – May 2024",
+      "description": "Supported MSMEs through business counseling, compliance assistance, and training facilitation.",
+      "achievements": [
+        "Organized training and seminars for MSME clients",
+        "Assisted with business registrations and documentation",
+        "Facilitated project proposal preparation and reporting"
+      ]
+    },
+    {
+      "type": "work",
+      "title": "Sales Assistant",
+      "company": "ACE Hardware Philippines Inc.",
+      "period": "October 2019 – February 2021",
+      "description": "Delivered excellent customer service and handled store inventory and reporting.",
+      "achievements": [
+        "Assisted customers with product selection and inquiries",
+        "Monitored stocks, prices, and store displays",
+        "Prepared reports including Inventory Balance and Loss & Breakage"
+      ]
+    },
+    {
+      "type": "education",
+      "title": "BS in Business Administration, Major in Marketing Management",
+      "company": "ICCT Colleges Foundation Inc.",
+      "period": "Graduated – 2019",
+      "description": "Developed leadership and analytical skills in business and marketing.",
+      "achievements": [
+        "Leadership Awardee (2018)",
+        "President, Business Administration Club – Antipolo Campus"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "descriptorsearch",
+    "title": "DescriptorSearch",
+    "description": "This platform is a user-friendly, static web app initially developed to assist DTI-Rizal Negosyo Center Business Counsellors in simplifying the search process for PSIC Descriptors.",
+    "tech": ["NextJS", "Typescript", "Tailwindcss", "Shadcn UI"],
+    "github": "https://github.com/rylCodes/bn-descriptors",
+    "live": "https://descriptorsearch.vercel.app/",
+    "featured": true,
+    "published": true,
+    "image": "/images/projects/descriptor.png",
+    "thumbnail": "/images/projects/descriptor-thumb.png",
+    "details": {
+      "challenge": "Business Counsellors at DTI-Rizal had difficulty quickly finding PSIC descriptors when assisting entrepreneurs, as BCs needed to open an Excel file containing thousands of entries that loaded slowly, or go through the business name registration steps just to search descriptors — even when clients simply wanted to inquire about registrability without proceeding to the official registration process.",
+      "solution": "Developed a lightweight static web app using Next.js and TypeScript that performs local JSON search filtering, enabling instant descriptor lookup, with automatic updates of descriptor data fetched from the official BNRS website’s download resource page, and integrated a chatbot powered by a 3rd-party provider to guide users in navigating descriptor categories and answering common inquiries.",
+      "results": "Reduced search time from several minutes to seconds, improving efficiency and allowing DTI-Rizal business counsellors to focus more on assisting clients."
+    },
+    "features": [
+      "Instant descriptor lookup using local JSON filtering",
+      "Automatic descriptor data updates from BNRS resource page",
+      "Integrated chatbot powered by a 3rd-party provider for guided assistance",
+      "Clean and responsive UI built with Tailwind CSS and Shadcn UI"
+    ]
+  },
+  {
+    "id": "rylflix",
+    "title": "RylFlix",
+    "description": "RylFlix is a movie streaming web app. It allows users to search and watch movies using a simple and user-friendly interface.",
+    "tech": ["Vue", "Tailwindcss"],
+    "github": "https://github.com/rylCodes/RylFlix",
+    "live": "https://rylflix.netlify.app/",
+    "featured": true,
+    "published": true,
+    "image": "/images/projects/rylflix.png",
+    "thumbnail": "/images/projects/rylflix-thumb.png",
+    "details": {
+      "challenge": "Wanted to create a modern movie streaming app with a clean UI and easy movie discovery without relying on complex backend services.",
+      "solution": "Built with Vue and TailwindCSS, integrating a third-party API for fetching movie data, and implemented client-side routing for fast navigation.",
+      "results": "Delivered a Netflix-inspired experience with fast loading times and responsive design that works smoothly across devices."
+    },
+    "features": [
+      "Movie search and streaming interface using third-party API",
+      "Client-side routing for smooth navigation",
+      "Responsive layout optimized for mobile and desktop"
+    ]
+  },
+  {
+    "id": "citycon",
+    "title": "Citycon Website",
+    "description": "Citycon is a construction company based in Cainta, Rizal. This website showcases the Citycon's services and projects using a modern and responsive design.",
+    "tech": ["NextJS", "Typescript", "Tailwindcss", "Shadcn UI"],
+    "github": "https://github.com/rylCodes/citycon",
+    "live": "https://citycon.vercel.app/",
+    "featured": false,
+    "published": true,
+    "image": "/images/projects/citycon.png",
+    "thumbnail": "/images/projects/citycon-thumb.png",
+    "details": {
+      "challenge": "Citycon needed a professional online presence to display its portfolio and establish credibility among clients.",
+      "solution": "Designed and developed a responsive corporate website with a modern layout using Next.js and TailwindCSS for quick deployment.",
+      "results": "Enhanced company visibility and improved client trust, leading to higher engagement and inquiries from potential clients."
+    },
+    "features": [
+      "Responsive corporate website layout with service showcase",
+      "Built with Next.js and Tailwind CSS for fast loading",
+      "Easy-to-navigate sections for company information and projects",
+      "Deployed on Vercel for reliable performance"
+    ]
+  },
+  {
+    "id": "invenia-plus",
+    "title": "Invenia+",
+    "description": "Invenia+ is my first Angular project. An inventory management system with POS. Future plans include online payment integration for enhanced functionality.",
+    "tech": [
+      "Angular",
+      "Typescript",
+      "Django",
+      "Python",
+      "Tailwindcss",
+      "Postgresql"
+    ],
+    "github": "https://github.com/rylCodes/Inventory-Management-System",
+    "live": "https://invenia.darylandres.com/",
+    "featured": false,
+    "published": false,
+    "image": "/images/projects/invenia.png",
+    "thumbnail": "/images/projects/invenia-thumb.png",
+    "details": {
+      "challenge": "Needed an all-in-one system to track inventory, sales, and reports efficiently for small businesses.",
+      "solution": "Developed a full-stack inventory management system using Angular for the frontend and Django for backend APIs, with PostgreSQL for data persistence.",
+      "results": "Delivered a functional POS and inventory system capable of handling real-world transactions, reducing manual bookkeeping errors."
+    },
+    "features": [
+      "Full-stack inventory management and POS system",
+      "Frontend built with Angular and TypeScript",
+      "Backend APIs powered by Django and PostgreSQL",
+      "Inventory, sales, and reporting modules integrated in one dashboard"
+    ]
+  },
+  {
+    "id": "qrlink",
+    "title": "QRLink",
+    "description": "I built this using a JavaScript library for QR code customization and a third-party API for URL shortening, enabling efficient generation and customization of QR codes. I developed this tool specifically for customized QR codes on DTI-Rizal's training posters.",
+    "tech": ["HTML", "CSS", "JavaScript", "Tailwindcss"],
+    "github": "https://github.com/rylCodes/qrcode-generator",
+    "live": "https://qrlink-maker.darylandres.com/",
+    "featured": false,
+    "published": false,
+    "image": "/images/projects/qrlink.png",
+    "thumbnail": "/images/projects/qrlink-thumb.png",
+    "details": {
+      "challenge": "DTI-Rizal needed customized QR codes for training materials that could also shorten URLs efficiently.",
+      "solution": "Used JavaScript’s QR library and integrated a URL shortening API, providing real-time QR generation with adjustable styles.",
+      "results": "Simplified the process of generating branded QR codes, helping the team produce marketing materials faster and more consistently."
+    },
+    "features": [
+      "Custom QR code generation with adjustable styles",
+      "Third-party API integration for URL shortening",
+      "Real-time QR preview and download",
+      "Designed for quick use on DTI-Rizal marketing materials"
+    ]
+  },
+  {
+    "id": "nc-antipolo",
+    "title": "NC Antipolo Portal",
+    "description": "This website is a mock/prototype derived from the official DTI Negosyo Center Online portal, but exclusively for Negosyo Center in Antipolo. It is designed for demonstration purposes, showcasing skills in design and conceptualization, and does not represent a fully operational system.",
+    "tech": ["HTML", "CSS", "JavaScript", "Tailwindcss", "Django", "Python"],
+    "github": "https://github.com/rylCodes/nc-antipolo-website",
+    "live": "https://negosyocenter-antipolo.azurewebsites.net/",
+    "featured": false,
+    "published": false,
+    "image": "/images/projects/ncantipolo.png",
+    "thumbnail": "/images/projects/ncantipolo-thumb.png",
+    "details": {
+      "challenge": "Aimed to design a conceptual prototype that reflects the Negosyo Center Online portal, localized for Antipolo.",
+      "solution": "Built with Django and TailwindCSS, this mock version demonstrates the portal’s layout, navigation, and UI improvements.",
+      "results": "Served as a strong presentation piece to demonstrate web development and UX design capabilities for government-inspired systems."
+    },
+    "features": [
+      "Prototype of the official Negosyo Center Online portal",
+      "Built with Django and Tailwind CSS for rapid prototyping",
+      "Showcases layout, UI, and navigation improvements",
+      "Demonstrates conceptual design for localized portals"
+    ]
+  }
+]

@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Metalcore/Deathcore dark theme - aggressive industrial */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+
+    /* Cards with dark elevation */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+
+    /* Popover elements */
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Blood red primary */
+    --primary: 0 75% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 0 85% 55%;
+
+    /* Dark charcoal secondary */
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 95%;
+
+    /* Muted elements */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Fiery orange accent */
+    --accent: 15 90% 50%;
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 20 100% 60%;
+
+    /* Destructive states */
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs with aggressive edge */
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 0 75% 45%;
+
+    --radius: 0.5rem;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(
+      135deg,
+      hsl(0 75% 45%) 0%,
+      hsl(0 0% 10%) 100%
+    );
+    --gradient-metallic: linear-gradient(
+      135deg,
+      hsl(0 0% 8%) 0%,
+      hsl(0 20% 12%) 100%
+    );
+    --gradient-glow: linear-gradient(
+      135deg,
+      hsl(0 85% 55% / 0.15) 0%,
+      hsl(20 100% 60% / 0.15) 100%
+    );
+
+    /* Shadows with aggressive glow */
+    --shadow-glow: 0 0 30px hsl(0 85% 55% / 0.4);
+    --shadow-glow-accent: 0 0 30px hsl(20 100% 60% / 0.4);
+    --shadow-elevation: 0 10px 40px -10px hsl(0 0% 0% / 0.8);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--primary-glow) / 0.5);
+  }
+
+  .text-glow-accent {
+    text-shadow: 0 0 20px hsl(var(--accent-glow) / 0.5);
+  }
+
+  .border-glow {
+    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.3),
+      inset 0 0 20px hsl(var(--primary-glow) / 0.1);
+  }
+
+  .border-glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent-glow) / 0.3),
+      inset 0 0 20px hsl(var(--accent-glow) / 0.1);
+  }
+
+  .cosmic-gradient {
+    background: var(--gradient-cosmic);
+  }
+
+  .metallic-gradient {
+    background: var(--gradient-metallic);
+  }
+
+  .glow-gradient {
+    background: var(--gradient-glow);
+  }
+
+  .glow-bottom {
+    position: relative;
+  }
+
+  .glow-bottom::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 3px;
+    border-radius: 0 0 8px 8px;
+    z-index: 10;
+
+    background: linear-gradient(
+      to right,
+      transparent,
+      hsl(0 75% 45%),
+      transparent
+    );
+  }
+}

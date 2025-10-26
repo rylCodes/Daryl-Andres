@@ -1,0 +1,192 @@
+[
+  {
+    "id": "my-journey-into-tech",
+    "title": "My Journey Into Tech",
+    "excerpt": "How I made the shift into tech — what helped me learn, stay motivated, and the lessons I picked up along the way.",
+    "content": [
+      {
+        "type": "heading",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you told me a few years ago that I'd end up working in web development, I probably wouldn't have believed you."
+      },
+      {
+        "type": "paragraph",
+        "text": "After high school, I stopped studying for five years. During that time, I helped with our small eatery, played guitar in a band, and worked in fast food. Later on, I decided to go back to school as a working student, taking up BSBA in Marketing Management. My first jobs had nothing to do with tech, I worked in retail and later in a government agency."
+      },
+      {
+        "type": "heading",
+        "text": "The Turning Point"
+      },
+      {
+        "type": "paragraph",
+        "text": "The turning point came while working in that government job. I wanted to make data searching easier for my team and started wondering if I could build a custom search tool. That curiosity pushed me to learn coding."
+      },
+      {
+        "type": "paragraph",
+        "text": "A big part of my journey wouldn't have been possible without guidance from Jez Reel Maghuyop, who has years of experience in the tech industry. He helped me figure out which tech path and stack to focus on, and whenever I got stuck, I could message him for advice. His mentorship gave me direction at a time when I didn't know where to start."
+      },
+      {
+        "type": "heading",
+        "text": "Finding Community"
+      },
+      {
+        "type": "paragraph",
+        "text": "I also joined the Tech Career Shifters Philippines Facebook group, where I found inspiration from people who were going through the same learning struggles. Seeing their progress reminded me that it's possible to start from zero and still make it."
+      },
+      {
+        "type": "paragraph",
+        "text": "After work, I'd study for a few hours every night and spend weekends coding. I treated it as a hobby at first, something fun to learn. I built small projects, starting with simple things like a search tool, just to see how far I could go. It wasn't easy balancing work and study, but those small wins kept me going."
+      },
+      {
+        "type": "heading",
+        "text": "Overcoming Burnout"
+      },
+      {
+        "type": "paragraph",
+        "text": "At one point, I burned out while learning a JavaScript framework too early. I took a short break, then went back to focus on the basics — HTML, CSS, and JavaScript. That made everything else much easier to understand later on."
+      },
+      {
+        "type": "paragraph",
+        "text": "Most of what I learned came from free online resources: YouTube tutorials, freeCodeCamp, and official documentation. I didn't have a computer science background, so I built projects to show what I could do instead of relying on credentials."
+      },
+      {
+        "type": "heading",
+        "text": "Landing My First Role"
+      },
+      {
+        "type": "paragraph",
+        "text": "A year later, I landed my first job as a Junior Web Developer. Now, I work with technologies like Next.js, React, and Tailwind on the frontend, Strapi, PHP/Symfony, and MySQL on the backend."
+      },
+      {
+        "type": "paragraph",
+        "text": "Looking back, shifting to tech wasn't just about learning to code, it was about learning how to learn, staying curious, and being patient with myself."
+      },
+      {
+        "type": "paragraph",
+        "text": "If you're thinking about making the same jump, start small and stay consistent. You don't have to know everything, you just need to keep showing up."
+      }
+    ],
+    "date": "February 24, 2025",
+    "readTime": "5 min read",
+    "category": "Career",
+    "featured": true,
+    "published": true,
+    "image": "/images/blogs/blog-tech-journey.jpg",
+    "thumbnail": "/images/blogs/blog-tech-journey-thumb.jpg"
+  },
+  {
+    "id": "reality-of-learning-tech",
+    "title": "The Reality of Learning Tech (That Nobody Tells You)",
+    "excerpt": "Learning tech isn't just about code — it's about patience, frustration, and the grit to keep going even when nothing works.",
+    "content": [
+      {
+        "type": "heading",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "When you start learning how to code, everyone tells you what to study — but not what it actually feels like."
+      },
+      {
+        "type": "paragraph",
+        "text": "Learning tech isn't a straight line. Some days, you feel like you're finally getting it, and the next day, you forget something basic. It's frustrating, but that's part of the process."
+      },
+      {
+        "type": "heading",
+        "text": "The Support System"
+      },
+      {
+        "type": "paragraph",
+        "text": "Having a mentor and a community really helps. But even with that support, I've realized that no one can keep you moving except yourself. You have to keep convincing yourself to show up, especially on days when you don't feel like it."
+      },
+      {
+        "type": "paragraph",
+        "text": "No tutorial or mentor can do the work for you. You'll still spend hours debugging, searching Stack Overflow, or rewatching the same video just to make something work. But when you finally fix that one bug or finish a small project, the sense of progress makes all the effort worth it."
+      },
+      {
+        "type": "heading",
+        "text": "Keep Moving Forward"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you're learning tech right now, keep going. You might not see results immediately, but every small thing you learn stacks up over time. Stay consistent — it's not about being the fastest learner, it's about being the one who doesn't quit."
+      },
+      {
+        "type": "paragraph",
+        "text": "Everyone's pace is different, but the goal is the same: to keep moving forward, one bug fix at a time."
+      }
+    ],
+    "date": "May 16, 2025",
+    "readTime": "4 min read",
+    "category": "Learning",
+    "featured": false,
+    "published": true,
+    "image": "/images/blogs/blog-learning-reality.jpg",
+    "thumbnail": "/images/blogs/blog-learning-reality-thumb.jpg"
+  },
+  {
+    "id": "choosing-your-tech-path",
+    "title": "Frontend, Backend, or Fullstack: Which Path Should You Choose?",
+    "excerpt": "Confused about which development path to take? Here's what you need to know about frontend, backend, and fullstack development.",
+    "content": [
+      {
+        "type": "heading",
+        "text": "Introduction"
+      },
+      {
+        "type": "paragraph",
+        "text": "One of the most common questions for beginners in tech is: 'Should I focus on frontend, backend, or try to become a fullstack developer?' The answer isn't as simple as picking one, but understanding what each path involves can help you make a better decision."
+      },
+      {
+        "type": "heading",
+        "text": "Understanding the Paths"
+      },
+      {
+        "type": "paragraph",
+        "text": "Frontend development is all about what users see and interact with. If you enjoy design, animations, and creating user experiences, frontend might be your thing. You'll work with HTML, CSS, JavaScript, and frameworks like React, Vue, or Angular."
+      },
+      {
+        "type": "paragraph",
+        "text": "Backend development focuses on servers, databases, and application logic. If you like solving problems, working with data, and building systems that power applications, backend could be a good fit. Common technologies include Node.js, Python, PHP, and databases like PostgreSQL or MongoDB."
+      },
+      {
+        "type": "paragraph",
+        "text": "Fullstack development means doing both. You handle everything from the user interface to the database. It's versatile but requires learning more technologies and maintaining knowledge across different areas."
+      },
+      {
+        "type": "heading",
+        "text": "My Recommendation"
+      },
+      {
+        "type": "paragraph",
+        "text": "Start with one path first. If you're drawn to visual design and user experience, start with frontend. If you prefer logic and data structures, go with backend. Once you're comfortable with one side, learning the other becomes easier."
+      },
+      {
+        "type": "paragraph",
+        "text": "I started with frontend because I could see immediate results, building something visual kept me motivated. Later, I learned backend to understand how everything connects. Now I work as a fullstack developer, but that foundation in frontend gave me confidence to expand."
+      },
+      {
+        "type": "heading",
+        "text": "What About Programming Languages?"
+      },
+      {
+        "type": "paragraph",
+        "text": "Don't get stuck overthinking which language to learn first. JavaScript is a safe choice because it works for both frontend and backend (with Node.js). Python is beginner-friendly and widely used. Pick one, stick with it long enough to build real projects, then expand if needed."
+      },
+      {
+        "type": "paragraph",
+        "text": "The most important thing isn't the path you choose, it's committing to one long enough to actually get good at it. Switching too often will slow you down. Pick a direction, build projects, and adjust as you learn more about what you enjoy."
+      }
+    ],
+    "date": "October 26, 2024",
+    "readTime": "6 min read",
+    "category": "Career",
+    "featured": false,
+    "published": true,
+    "image": "/images/blogs/blog-choosing-path.jpg",
+    "thumbnail": "/images/blogs/blog-choosing-path-thumb.jpg"
+  }
+]
