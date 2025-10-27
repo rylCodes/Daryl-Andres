@@ -140,7 +140,7 @@ export const Layout = ({ children }: LayoutProps) => {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     location.pathname === item.path
-                      ? "text-primary bg-primary/10"
+                      ? "text-accent bg-primary/10"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >

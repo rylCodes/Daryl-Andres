@@ -5,12 +5,8 @@ import { Link } from "react-router-dom";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-metalcore.jpg";
-import About from "./About";
-import TechStack from "./TechStack";
-import Experience from "./Experience";
-import Certificates from "./Certificates";
 
-// Lazy load components that are below the fold
+// Lazy load components
 const AboutComponent = lazy(() => import("./About"));
 const TechStackComponent = lazy(() => import("./TechStack"));
 const ExperienceComponent = lazy(() => import("./Experience"));
@@ -34,7 +30,13 @@ const Home = () => {
     offset: ["start start", "end start"],
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const isMobile = window.innerWidth < 768;
+
+  const backgroundY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? ["0%", "0%"] : ["0%", "50%"]
+  );
 
   const particlesY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
@@ -57,7 +59,7 @@ const Home = () => {
         {/* Hero Background */}
         <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-30"
+            className="absolute inset-0 bg-cover bg-center opacity-50"
             style={{ backgroundImage: `url(${heroImage})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/80 to-background" />
@@ -149,7 +151,7 @@ const Home = () => {
 
       {/* Tech Stack */}
       <Suspense fallback={<SectionSkeleton />}>
-        <TechStack isFullPage={false} />
+        <TechStackComponent isFullPage={false} />
       </Suspense>
 
       {/* Certificates */}
