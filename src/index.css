@@ -171,4 +171,14 @@ All colors MUST be HSL.
 * {
   scrollbar-width: thin;
   scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+  max-width: 100%;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
 }

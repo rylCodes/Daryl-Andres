@@ -133,17 +133,17 @@ const CertificateSection = ({
         <DialogContent className="max-w-fit border-0 bg-transparent p-0 [&>button]:hidden">
           <DialogClose asChild>
             <button
-              className="absolute top-2 right-2 rounded-full p-2 bg-background/60 hover:bg-background transition-colors !block"
+              className="absolute top-2 right-2 rounded-full p-2 bg-background/60 hover:bg-background transition-colors !outline-none !block"
               aria-label="Close"
             >
               <X className="h-4 w-4" />
             </button>
           </DialogClose>
-          <div className="flex items-center justify-center max-h-[80vh] overflow-auto">
+          <div className="flex items-center justify-center overflow-auto">
             <img
               src={selectedCert?.image || "/placeholder.svg"}
               alt={selectedCert?.name}
-              className="max-w-full max-h-[75vh] object-contain rounded-md"
+              className="max-w-full object-contain rounded-md"
             />
           </div>
 

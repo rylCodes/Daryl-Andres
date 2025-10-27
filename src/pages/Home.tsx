@@ -30,13 +30,7 @@ const Home = () => {
     offset: ["start start", "end start"],
   });
 
-  const isMobile = window.innerWidth < 768;
-
-  const backgroundY = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? ["0%", "0%"] : ["0%", "50%"]
-  );
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   const particlesY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
