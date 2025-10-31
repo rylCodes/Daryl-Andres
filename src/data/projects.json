@@ -1,5 +1,35 @@
 [
   {
+    "id": "paymora",
+    "title": "Paymora",
+    "description": "Paymora is a full-featured payroll management system designed to simplify payroll processing, employee management, and report generation for small to medium-sized businesses.",
+    "tech": [
+      "ReactJS, JavaScript",
+      "FastAPI, Python",
+      "PostgreSQL, Supabase",
+      "Tailwindcss, Shadcn UI"
+    ],
+    "github": "https://github.com/andresdaryl/peyrol",
+    "live": "https://paymora.vercel.app",
+    "featured": true,
+    "published": true,
+    "image": "/images/projects/paymora.png",
+    "thumbnail": "/images/projects/paymora-thumb.png",
+    "details": {
+      "challenge": "Managing payroll manually can be time-consuming and prone to errors, especially for businesses with multiple employees and varying pay structures.",
+      "solution": "Developed Paymora — a web-based payroll management system that automates employee records, salary computation, and payslip generation. The frontend is built using React (Tailwind CSS + Shadcn UI) for a fast, modern UI, while the backend uses FastAPI and PostgreSQL for secure, scalable data handling.",
+      "results": "Streamlined payroll operations, reduced human error, and improved efficiency by centralizing employee management and payroll processing in one intuitive platform."
+    },
+    "features": [
+      "Employee information and position management",
+      "Automated payroll computation with benefits, tax, leaves, and allowances",
+      "Payslip generation and export options",
+      "Integrated reports and summaries",
+      "User authentication and role-based access control via Supabase",
+      "Modern, responsive UI built with Tailwind CSS and Shadcn UI"
+    ]
+  },
+  {
     "id": "descriptorsearch",
     "title": "DescriptorSearch",
     "description": "This platform is a user-friendly, static web app initially developed to assist DTI-Rizal Negosyo Center Business Counsellors in simplifying the search process for PSIC Descriptors.",
@@ -29,7 +59,7 @@
     "tech": ["Vue", "Tailwindcss"],
     "github": "https://github.com/rylCodes/RylFlix",
     "live": "https://rylflix.netlify.app/",
-    "featured": true,
+    "featured": false,
     "published": true,
     "image": "/images/projects/rylflix.png",
     "thumbnail": "/images/projects/rylflix-thumb.png",

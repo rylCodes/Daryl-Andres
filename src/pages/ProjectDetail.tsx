@@ -102,7 +102,6 @@ const ProjectDetail = () => {
             alt={project.title}
             className="relative w-full rounded-xl border border-border shadow-2xl"
           />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_30%,rgba(0,0,0,0.7)_100%)] pointer-events-none" />
         </motion.div>
 
         {/* Tech Stack */}
