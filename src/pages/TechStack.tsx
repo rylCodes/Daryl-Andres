@@ -17,7 +17,7 @@ const TechStack = ({ isFullPage = true }) => {
             Tech Stack
           </h2>
           <p className="text-xl text-muted-foreground">
-            Tools and technologies I’ve learned and continue to grow with.
+            Tools and technologies I work with.
           </p>
         </motion.div>
 
@@ -33,8 +33,7 @@ const TechStack = ({ isFullPage = true }) => {
             <span className="font-heading font-semibold text-primary">
               Current Tech Stack:{" "}
             </span>
-            The tools I actively use in my current role to build and maintain
-            scalable web applications.
+            The tools I actively use in my current role.
           </h2>
 
           <div className="flex flex-wrap justify-center gap-8">
@@ -55,7 +54,7 @@ const TechStack = ({ isFullPage = true }) => {
                 <div className="relative flex flex-col items-center">
                   <div className="p-3 rounded-xl bg-card border border-border shadow-md hover:border-primary/50 transition-all">
                     <img
-                      src={tech.icon}
+                      src={tech.icon || "/placeholder.svg"}
                       alt={tech.name}
                       className="w-14 h-14 object-contain"
                     />
@@ -69,7 +68,7 @@ const TechStack = ({ isFullPage = true }) => {
           </div>
         </motion.div>
 
-        {/* PROGRESS BAR TECH STACK */}
+        {/* TECH EXPERTISE */}
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {techCategories.map((category, catIndex) => {
             const Icon = category.icon;
@@ -85,7 +84,7 @@ const TechStack = ({ isFullPage = true }) => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300 opacity-50" />
                 <div className="relative bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-300 h-full">
                   {/* Category Header */}
-                  <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-3 mb-6">
                     <div
                       className={`w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ${category.color}`}
                     >
@@ -96,7 +95,7 @@ const TechStack = ({ isFullPage = true }) => {
                     </h3>
                   </div>
 
-                  {/* Technologies with Progress */}
+                  {/* Technologies List */}
                   <div className="space-y-3">
                     {category.technologies.map((tech, techIndex) => (
                       <motion.div
@@ -108,26 +107,9 @@ const TechStack = ({ isFullPage = true }) => {
                           delay: techIndex * 0.05,
                         }}
                         viewport={{ once: true }}
+                        className="text-sm font-medium text-foreground"
                       >
-                        <div className="flex items-center justify-between mb-1">
-                          <span className="text-sm font-medium">
-                            {tech.name}
-                          </span>
-                          <span className="text-xs text-muted-foreground">
-                            {tech.level}%
-                          </span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: `${tech.level}%` }}
-                            transition={{
-                              duration: 1,
-                              delay: 0.5 + catIndex * 0.1 + techIndex * 0.05,
-                            }}
-                            className="h-full bg-gradient-to-r from-primary from-60% to-accent rounded-full"
-                          />
-                        </div>
+                        {tech.name}
                       </motion.div>
                     ))}
                   </div>
