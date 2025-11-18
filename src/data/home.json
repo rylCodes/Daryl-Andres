@@ -13,7 +13,7 @@
     {
       "icon": "Code",
       "title": "Becoming a Developer",
-      "description": "Now working as a Junior Web Developer, building and maintaining applications using Next.js, Vue.js, React, Strapi, and Tailwind CSS — focusing on clean, responsive, and scalable systems."
+      "description": "Now working as Web Developer, building and maintaining applications using Next.js, Vue.js, React, Strapi, and Tailwind CSS — focusing on clean, responsive, and scalable systems."
     },
     {
       "icon": "Heart",
@@ -107,7 +107,7 @@
   "experiences": [
     {
       "type": "work",
-      "title": "Junior Web Developer",
+      "title": "Full Stack Web Developer",
       "company": "Chanz IT Business Solutions Inc.",
       "period": "May 2024 – Present",
       "description": "Contributed to full-stack development for a Next.js + Strapi web app and Pimcore PIMS project.",
